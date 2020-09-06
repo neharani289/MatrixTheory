@@ -1,17 +1,16 @@
-import math
+\documentclass{article}
+\usepackage{listings}             % Include the listings-package
+\begin{document}
+\lstset{language=Python}          % Set your language (you can change the language for each code-block optionally)
 
-def get_angle(line1, line2):
-    # Get directional vectors
-    d1 = (line1[1][0] - line1[0][0], line1[1][1] - line1[0][1])
-    d2 = (line2[1][0] - line2[0][0], line2[1][1] - line2[0][1])
-    # Compute dot product
-    p = d1[0] * d2[0] + d1[1] * d2[1]
-    # Compute norms
-    n1 = math.sqrt(d1[0] * d1[0] + d1[1] * d1[1])
-    n2 = math.sqrt(d2[0] * d2[0] + d2[1] * d2[1])
-    # Compute angle
-    ang = math.acos(p / (n1 * n2))
-    # Convert to degrees if you want
-    ang = math.degrees(ang)
-    return ang
+\begin{lstlisting}[frame=single]  % Start your code-block
+import numpy as np
+A = np.array([[3,4])
+b = np.array([0,-2.67])
+c = np.array([0,10.67])
+z = np.linalg.solve(A,b,c)
+p = print(z)
+x = print(z[0])
+\end{lstlisting}
 
+\end{document}
