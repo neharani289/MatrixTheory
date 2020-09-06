@@ -1,16 +1,39 @@
-\documentclass{article}
-\usepackage{listings}             % Include the listings-package
-\begin{document}
-\lstset{language=Python}          % Set your language (you can change the language for each code-block optionally)
-
-\begin{lstlisting}[frame=single]  % Start your code-block
 import numpy as np
-A = np.array([[3,4])
-b = np.array([0,-2.67])
-c = np.array([0,10.67])
-z = np.linalg.solve(A,b,c)
-p = print(z)
-x = print(z[0])
-\end{lstlisting}
+import matplotlib.pyplot as plt
+from coeffs import *
+#using termux
+import subprocess
+import  shlex
+#def destroy(self):
+#self.close_event()
+#For y1 and c1
+#4x+3y=12 
+#x1 = np.array([xA,yA])
+D1 = np.array([12,0])
+M1 = np.array([[4,3],[1,0]])
+M1inv=np.linalg.inv(M1)
+y1=M1inv@D1
+c1=y1+np.array([3,-4])
+#For y1 and c1
+#3y=4 
+#11 = np.array([xA,yA])
+#plotting points
+plt.plot(y1[0], y1[1], 'o')
+plt.text(y1[0] * (1 - 0.1), y1[1] * (1 + 0.1) , 'y1')
+plt.plot(c1[0], c1[1], 'o')
+plt.text(c1[0] * (1 - 0.1), c1[1] * (1 + 0.1) , 'c1')
+#plotting the lines
+x=np.linspace(-10,10,500)
+y1=(-4*x+12)/3
+plt.plot(x,y1,label='4x+3y=12')
+plt.xlabel('$x$')
+plt.ylabel('$y$')
+plt.legend(loc='best')
+plt.grid() # minor
+#plt.axis('equal')
+plt.savefig('./pyfigs/pointonline.eps')
 
-\end{document}
+#print(3)
+plt.show()
+#print(4)
+
