@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 #Plotting all lines
@@ -39,8 +33,6 @@ plt.legend()
 # function to show the plot 
 plt.show() 
 
-
-# In[ ]:
 
 
 
