@@ -1,39 +1,34 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from coeffs import *
-#using termux
-import subprocess
-import  shlex
-#def destroy(self):
-#self.close_event()
-#For y1 and c1
-#4x+3y=12 
-#x1 = np.array([xA,yA])
-D1 = np.array([12,0])
-M1 = np.array([[4,3],[1,0]])
-M1inv=np.linalg.inv(M1)
-y1=M1inv@D1
-c1=y1+np.array([3,-4])
-#For y1 and c1
-#3y=4 
-#11 = np.array([xA,yA])
-#plotting points
-plt.plot(y1[0], y1[1], 'o')
-plt.text(y1[0] * (1 - 0.1), y1[1] * (1 + 0.1) , 'y1')
-plt.plot(c1[0], c1[1], 'o')
-plt.text(c1[0] * (1 - 0.1), c1[1] * (1 + 0.1) , 'c1')
-#plotting the lines
-x=np.linspace(-10,10,500)
-y1=(-4*x+12)/3
-plt.plot(x,y1,label='4x+3y=12')
+#Plotting all lines
+x = np.linspace(-10, 10, 40)
+y= (12-4*x)/3
+plt.plot(x,y, label ='4x+3y=12')
+plt.xlim(-8,8)
+plt.ylim(-12,12)
+plt.legend()
 plt.xlabel('$x$')
 plt.ylabel('$y$')
-plt.legend(loc='best')
-plt.grid() # minor
-#plt.axis('equal')
-plt.savefig('./pyfigs/pointonline.eps')
+plt.grid() 
 
-#print(3)
-plt.show()
-#print(4)
+# y-axis values 
+x = [3,0,0]
+y = [4,-8,10.67] 
+  
+# plotting points as a plot 
+plt.plot(0,-8, 'ro', label = 'P2(0,a)')
+plt.plot(0,4, 'ro', label = 'P1(0,4)')
+plt.plot(0,10.67, 'ro', label = 'P3(0,b)')
 
+  
+# x-axis label 
+plt.xlabel('x - axis') 
+# frequency label 
+plt.ylabel('y - axis') 
+# plot title 
+plt.title('line plot!') 
+# showing legend 
+plt.legend() 
+  
+# function to show the plot 
+plt.show() 
