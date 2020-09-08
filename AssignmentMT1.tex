@@ -164,29 +164,38 @@ https://github.com/neharani289/ee14014/Assignment1
 %
 
 \begin{enumerate}
-\noindent now distance between a given line which meet y-axis at point \vec{P_1} and  desired point\vec{P_2} and \vec{P_3}
+\noindent Using the formula for the distance of a point P from a line
 \\
 \end{enumerate}
-%
 \begin{align}
-\ d &= \frac{(\vec{P_1}-\vec{P_2})^T n}{||n||} \\
-\implies 4 &= \frac{\myvec{0 & \brak{4-a}}^T\myvec{4\\3}}{5}
-\implies 20 &= 12-3a\\
-\ a &= -8/3
+\ d &= \frac{|n^TP-c|}{\norm{\vec{n}}}
 \end{align}
 %
 \begin{enumerate}
-\noindent similarly distance between given line and the desired point P3 can be calculated as:\\
+\ Since the point lies on the y-axis. let
 \end{enumerate}
 %
 \begin{align}
-\ d &= \frac{(\vec{P_3}-\vec{P_1})^T n}{||n||}\\
-\implies 4 &= \frac{\myvec{0 & \brak{b-4}}^T\myvec{4\\3}}{5}\\
-\ 20 &= 3b-12\\
-\ b &= 32/3
+\ P = \myvec{0\\k}
 \end{align}
+%
 \begin{enumerate}
-\noindent therefore points on y-axis at 4 units distance from line are (0,-8) and (0,32/3).
+\If the equation of the line is :
+\end{enumerate}
+%
+\begin{align}
+\ n^Tx = c \\
+\implies \frac{|n^TP-c|}{\norm{\vec{n}}} = 4
+\\
+\implies 3k - 12 = \pm 20
+\\
+\implies k&= -8/3 
+\ or
+\ 32/3
+\end{align}
+%
+\begin{enumerate}
+\noindent therefore points on y-axis at distance of P from line are (0,-8) and (0,32/3).
 \end{enumerate}
 \newpage
 \begin{figure}[!ht]
@@ -194,15 +203,6 @@ https://github.com/neharani289/ee14014/Assignment1
 \includegraphics[width=\columnwidth]{figure 1.png}
 \label{figure 1}
 \end{figure}
-%
-%\subsection{Sol.a)}
-%\input{./chapters/sol_a.tex}
-%\subsection{Sol.b)}
-%\input{./chapters/sol_b.tex}\
-%\subsection{Sol.c)}
-%\input{./chapters/sol_c.tex}
-%\subsection{Sol.d)}
-%\input{chapters/sol_d.tex}
 \end{document}
 © 2020 GitHub, Inc.
 Terms
