@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
-
 import numpy as np
 
 # Taking values  y=1 and k=2 in the given determinant (3.10,18(ii)) and check whether it is 20.
@@ -13,9 +7,6 @@ X = np.array([[[3,1,1],[1,3,1],[1,1,3]]])
 detx = np.linalg.det(X)
 print("The value of determinant is = ", detx)
 print("\nHence proved.")
-
-
-# In[ ]:
 
 
 
