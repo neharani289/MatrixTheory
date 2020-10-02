@@ -3,16 +3,13 @@
 \usepackage{setspace}
 \usepackage{gensymb}
 \usepackage{siunitx}
-\usepackage{tkz-euclide} 
+\usepackage{tkz-euclide}
 \usepackage{textcomp}
 \usepackage{standalone}
-\usetikzlibrary{calc}
-
 %\doublespacing
 \singlespacing
-
-\usepackage{graphicx}
-\graphicspath{ {/user/Neha Rani/desktop} }
+\usetikzlibrary{calc}
+%\usepackage{graphicx}
 %\usepackage{amssymb}
 %\usepackage{relsize}
 \usepackage[cmex10]{amsmath}
@@ -57,11 +54,9 @@
     \usepackage{hhline}                                           %%
     \usepackage{ifthen}                                           %%
   %optionally (for landscape tables embedded in another document): %%
-    \usepackage{lscape}     
+    \usepackage{lscape}    
 \usepackage{multicol}
 \usepackage{chngcntr}
-\usepackage{amsmath}
-\usepackage{cleveref}
 %\usepackage{enumerate}
 
 %\usepackage{wasysym}
@@ -82,17 +77,15 @@
 
 \lstset{
 %language=C,
-frame=single, 
+frame=single,
 breaklines=true,
 columns=fullflexible
 }
 %\lstset{
 %language=tex,
-%frame=single, 
+%frame=single,
 %breaklines=true
 %}
-\usepackage{graphicx}
-\usepackage{pgfplots}
 
 \begin{document}
 %
@@ -191,62 +184,34 @@ In $\triangle{ABC}$, the bisector $\vec{AD}$ of
 \caption{Isosceles Triangle with $\vec{AD}$  $\perp$ $\vec{BC}$}
 \label{fig:tri_right_angle}
 \end{figure}
-Given,
-   line AD is perpendicular to line BC which implies the inner product is zero.  
-\begin{align}
-\vec(B-D)^T \vec(A-D) &= \vec(D-A)^T \vec(B-D)&= 0
-\end{align}
-In $\triangle{BAD}$ and $\triangle{CAD}$ ;\\
-Taking inner product of sides BA and AD
-\begin{align}
- (\vec{B}-\vec{A})^T(\vec{A}-\vec{D}) =
-    \norm{\vec{B}-\vec{A}}\norm{\vec{A}-\vec{D}}\cos{BAD}
-\end{align}
-The angle BAD from the  above equation is:
+In $\triangle{BAD}$ and $\triangle{CAD}$ applying cosine law we get;\\
 \begin{align}\label{my20}
-     \cos{BAD} = \frac{(\vec{B}-\vec{A})^T(\vec{A}-\vec{D})}{\norm{\vec{B}-\vec{A}}\norm{\vec{A}-\vec{D}}} 
-     \end{align}
-Taking inner product of sides BA and AD
-\begin{align}
- (\vec{C}-\vec{A})^T(\vec{A}-\vec{D}) =
-    \norm{\vec{C}-\vec{A}}\norm{\vec{A}-\vec{D}}\cos{CAD}
-    \end{align}
-    The angle CAD from the  above equation is:
+     \norm{\vec{B-D}}^2 = \norm{\vec{A-B}}^2+ \norm{\vec{A-D}}^2 \norm{\vec{A-B}}\norm{\vec{A-D}}\cos{BAD}
+\end{align}
+similarly;
 \begin{align}\label{my21}
-     \cos{CAD} = \frac{(\vec{C}-\vec{A})^T(\vec{A}-\vec{D})}{\norm{\vec{C}-\vec{A}}\norm{\vec{A}-\vec{D}}} 
-     \end{align}
-from equation (\ref{my20}) and (\ref{my21})\\
-\begin{align}
-\angle {BAD}=\angle {CAD}
+      \norm{\vec{D-C}}^2 = \norm{\vec{A-C}}^2+ \norm{\vec{A-D}}^2 + \norm{\vec{A-C}}\norm{\vec{A-D}}\cos{CAD}
 \end{align}
-%
-Similarly;
+Now using pythagorus law;
 \begin{align}\label{my22}
- (\vec{A}-\vec{D})^T(\vec{D}-\vec{B}) =
-    \norm{\vec{A}-\vec{D}}\norm{\vec{D}-\vec{B}}\cos{ADB}
-    \end{align}
-%
+     \norm{\vec{A-B}}^2 = \norm{\vec{A-D}}^2+ \norm{\vec{B-D}}^2
+\end{align}
 \begin{align}\label{my23}
-    (\vec{A}-\vec{D})^T(\vec{D}-\vec{c}) =
-    \norm{\vec{A}-\vec{D}}\norm{\vec{D}-\vec{C}}\cos{ADC}
-    \end{align}
-%
-from equation (\ref{my22}) and (\ref{my23}) we can say;
-\begin{align}
-    \angle {ADB}=\angle {ADC}=90\degree
-    \end{align}
-    and
-\begin{align}
-\norm{\vec{A-D}} = \norm{\vec{A-D}}
+     \norm{\vec{A-C}}^2 = \norm{\vec{A-D}}^2+ \norm{\vec{D-C}}^2
 \end{align}
-By, ASA property $\triangle{BAD}$ $\cong$ $\triangle{CAD}$ ,
-hence triangles are congruent. \\ 
-Now by using CSCT property;\\
-%
-\begin{align}
-\norm{\vec{A-B}} = \norm{\vec{A-C}} 
+From (\ref{my20}) and (\ref{my22})
+\begin{align}\label{my24}
+ 2\norm{\vec{A-D}}^2 + \norm{\vec{A-B}}\norm{\vec{A-D}}\cos{BAD} = 0  
 \end{align}
-%
-By converse of isosceles triangle theorem $\triangle{ABC}$ is isosceles.\\
+From (\ref{my21}) and (\ref{my23})
+\begin{align}\label{my25}
+2\norm{\vec{A-D}}^2 + \norm{\vec{A-C}}\norm{\vec{A-D}}\cos{CAD} = 0
+\end{align}
+equating (\ref{my24}) and (\ref{my25}) gives;
+\begin{align}
+     \cos{BAD} = \cos{CAD}  \\    
+     \norm{\vec{A-B}} = \norm{\vec{A-C}} 
+\end{align}
+Thus, $\triangle{ABC}$ is isosceles triangle. \\
 Hence proved.
 \end{document}
