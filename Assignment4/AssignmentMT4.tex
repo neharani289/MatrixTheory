@@ -174,8 +174,8 @@ https://github.com/neharani289/ee14014/tree/master/Assignment4
 \end{lstlisting}
 \section{Problem}
 In $\triangle{ABC}$, the bisector $\vec{AD}$ of
-     \angle{A}
-      $\perp$  to side $\vec{BC}$.Show that $\vec{AB}$ = $\vec{AC}$ and $\triangle{ABC}$ is isosceles.
+\angle{A}
+$\perp$  to side $\vec{BC}$.Show that $\vec{AB}$ = $\vec{AC}$ and $\triangle{ABC}$ is isosceles.
 \section{Solution}
 \renewcommand{\thefigure}{1}
 \begin{figure}[!ht]
@@ -184,33 +184,48 @@ In $\triangle{ABC}$, the bisector $\vec{AD}$ of
 \caption{Isosceles Triangle with $\vec{AD}$  $\perp$ $\vec{BC}$}
 \label{fig:tri_right_angle}
 \end{figure}
-In $\triangle{BAD}$ and $\triangle{CAD}$ applying cosine law we get;\\
-\begin{align}\label{my20}
-     \norm{\vec{B-D}}^2 = \norm{\vec{A-B}}^2+ \norm{\vec{A-D}}^2 \norm{\vec{A-B}}\norm{\vec{A-D}}\cos{BAD}
+Given,
+line AD is perpendicular to line BC which implies the inner product is zero  	
+\begin{align}\label{my20}	
+(\vec{B}-\vec{D})^T (\vec{A}-\vec{D}) &= (\vec{D}-\vec{A
+})^T (\vec{B}-\vec{D})&= 0
 \end{align}
-similarly;
 \begin{align}\label{my21}
-      \norm{\vec{D-C}}^2 = \norm{\vec{A-C}}^2+ \norm{\vec{A-D}}^2 + \norm{\vec{A-C}}\norm{\vec{A-D}}\cos{CAD}
+(\vec{C}-\vec{D})^T (\vec{A}-\vec{D}) &= (\vec{D}-\vec{A})^T (\vec{C}-\vec{D})&= 0	
+\end{align}
+Consider$\triangle{BAD}$ and $\triangle{CAD}$ ;\\	
+Taking inner product of sides BA and AD	
+\begin{align}\label{my22}	
+(\vec{B}-\vec{A})^T(\vec{A}-\vec{D}) =	
+\norm{\vec{B}-\vec{A}}\norm{\vec{A}-\vec{D}}\cos{BAD}	
+\end{align}
+The angle BAD from the  above equation is:	
+\begin{align}\label{my23}	
+     \cos{BAD} = \frac{(\vec{B}-\vec{A})^T(\vec{A}-\vec{D})}{\norm{\vec{B}-\vec{A}}\norm{\vec{A}-\vec{D}}} 
+\end{align}
+Taking inner product of sides CA and AD	
+\begin{align}\label{my24}	
+(\vec{C}-\vec{A})^T(\vec{A}-\vec{D}) =	
+\norm{\vec{C}-\vec{A}}\norm{\vec{A}-\vec{D}}\cos{CAD}	
+\end{align}
+The angle CAD from the  above equation is:	
+\begin{align}\label{my25}	
+     \cos{CAD} = \frac{(\vec{C}-\vec{A})^T(\vec{A}-\vec{D})}{\norm{\vec{C}-\vec{A}}\norm{\vec{A}-\vec{D}}} 
+\end{align}
+from equation (\ref{my23}) and (\ref{my25})\\	
+\begin{align}
+\angle {BAD}=\angle {CAD}	
 \end{align}
 Now using pythagorus law;
-\begin{align}\label{my22}
-     \norm{\vec{A-B}}^2 = \norm{\vec{A-D}}^2+ \norm{\vec{B-D}}^2
+\begin{align}\label{my26}
+     \norm{\vec{B-A}}^2 = \norm{\vec{A-D}}^2+ \norm{\vec{B-D}}^2
 \end{align}
-\begin{align}\label{my23}
-     \norm{\vec{A-C}}^2 = \norm{\vec{A-D}}^2+ \norm{\vec{D-C}}^2
+\begin{align}\label{my27}
+     \norm{\vec{C-A}}^2 = \norm{\vec{A-D}}^2+ \norm{\vec{C-D}}^2
 \end{align}
-From (\ref{my20}) and (\ref{my22})
-\begin{align}\label{my24}
- 2\norm{\vec{A-D}}^2 + \norm{\vec{A-B}}\norm{\vec{A-D}}\cos{BAD} = 0  
-\end{align}
-From (\ref{my21}) and (\ref{my23})
-\begin{align}\label{my25}
-2\norm{\vec{A-D}}^2 + \norm{\vec{A-C}}\norm{\vec{A-D}}\cos{CAD} = 0
-\end{align}
-equating (\ref{my24}) and (\ref{my25}) gives;
-\begin{align}
-     \cos{BAD} = \cos{CAD}  \\    
-     \norm{\vec{A-B}} = \norm{\vec{A-C}} 
+using (\ref{my20}) and (\ref{my21}) in above equation we can conclude ;
+\begin{align}\label{my28}
+     \norm{\vec{B-A}} = \norm{\vec{C-A}} 
 \end{align}
 Thus, $\triangle{ABC}$ is isosceles triangle. \\
 Hence proved.
