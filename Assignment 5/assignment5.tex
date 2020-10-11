@@ -229,17 +229,10 @@ Substituting in \eqref{eq6}
 	\label{eq19}\vec{P} &= \myvec{\frac{-\sqrt{533} - 22}{2} & \frac{-22 + \sqrt{533}}{2}\\ 1 & 1}\\
 	\label{eq20}\vec{D} &= \myvec{1 + \frac{\sqrt{533}}{2} & 0\\ 0 & 1 - \frac{\sqrt{533}}{2}}
 \end{align}
-Under \textit{Affine transformation},
-\begin{align}
-	\vec{x} &= \vec{M}\vec{y} + c\\
-	\myvec{x \\ y} &= \myvec{1 & 0 \\ 0 & 1} \myvec{X \\ Y} + \myvec{\alpha \\ \beta}\\
-	\label{eq7}\myvec{x \\ y} &= \myvec{X+\alpha \\ Y+\beta}
-\end{align}
- under transformation \eqref{eq7} will become,
+Using \textit{Spectral decomposition} of matrix
 \begin{equation}\label{eq13}
 	\implies \lambda_1 (X^\prime)^2 + \lambda_2 (Y^\prime)^2 = 0
 \end{equation}
-\eqref{eq13} is called \textit{Spectral decomposition} of matrix
 \begin{align}
 	\implies X^\prime &= \pm \sqrt{-\frac{\lambda_2}{\lambda_1}}Y^\prime\\	
 	u_1X + u_2Y &= \pm \sqrt{-\frac{\lambda_2}{\lambda_1}}(v_1X + v_2Y)\\
