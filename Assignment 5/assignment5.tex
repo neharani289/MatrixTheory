@@ -174,23 +174,11 @@ https://github.com/neharani289/ee14014/tree/master/Assignment5
 \end{lstlisting}
 \section{Problem}
 Prove that the equation $12x^2+7xy-10y^2+13x+45y-35=0$ represents two straight lines and find the angle between them 
-\subsection{Pair of staraight lines}
+\section{Solution}
 The general second order equation is given by ,
 \begin{align}
-    ax^2+2bxy+cy^2+2dx+2ey+f&=0\label{eq1}
-    \intertext{the above equation \eqref{eq1} can be expressed as}
-    \vec{x}^T\vec{V}\vec{x}+2\vec{u}^T\vec{x}+f&=0\label{eq3}
-    \intertext{where}
-    \vec{V}=\vec{V}^T&=\myvec{a & b \\ b & c}\label{eq4}\\
-    \vec{u}&=\myvec{d \\ e}\label{eq5}
-    \end{align}
-the above equation \eqref{eq1} represents a pair of straight lines if
-\begin{align}
-    \begin{array}{|cc|}
-\vec{V} & \vec{u}\\\vec{u}^T & f
-\end{array}&=0\label{eq6}
+ax^2+2bxy+cy^2+2dx+2ey+f&=0\label{eq1}
 \end{align}
-\section{Solution}
 Given,
 \begin{align}
     12x^2+7xy-10y^2+13x+45y-35&=0 \label{eqgiven}
@@ -223,48 +211,11 @@ The lines intercept if
  	\mydet{\vec{V}}=-\frac{529}{4} < 0 \label{eq:solutions/eq11}
 \end{align}
 \renewcommand{\thefigure}{1}
-From (\ref{eq:solutions/eq10}) and (\ref{eq:solutions/eq11}) it can be concluded that the given equation represents a pair of intersecting lines.
-
-
-
+From (\ref{eq:solutions/eq10}) and (\ref{eq:solutions/eq11}) it can be concluded that the given equation represents a pair of intersecting lines.\\
 Let $(\alpha,\beta)$ be their point of intersection, then
 \begin{equation}\label{eq6}
 	\myvec{ a & b\\ b & c}\myvec{\alpha \\ \beta} = \myvec{-d \\ -e}
 \end{equation}
-Under \textit{Affine transformation},
-\begin{align}
-	\vec{x} &= \vec{M}\vec{y} + c\\
-	\myvec{x \\ y} &= \myvec{1 & 0 \\ 0 & 1} \myvec{X \\ Y} + \myvec{\alpha \\ \beta}\\
-	\label{eq7}\myvec{x \\ y} &= \myvec{X+\alpha \\ Y+\beta}
-\end{align}
- under transformation \eqref{eq7} will become,
-\begin{equation}\label{eq8}
-	aX^2 + 2bXY + cY^2 = 0
-\end{equation}
-\begin{equation}\label{eq9}
-	\myvec{X & Y} \myvec{a & b \\ b & c} \myvec{X \\ Y} = 0
-\end{equation}
-%\begin{equation}\label{eq10}
-%	\vec{X}^T\vec{V}\vec{X} = 0
-%\end{equation}
-\begin{equation}\label{eq11}
-	\myvec{X & Y} \myvec{u_1 & v_1 \\ u_2 & v_2} \myvec{\lambda_1 & 0\\ 0 & \lambda_2} \myvec{u_1 & u_2 \\ v_1 & v_2} \myvec{X \\ Y} = 0
-\end{equation}
-\begin{equation}
-	\myvec{X^\prime & Y^\prime}  \myvec{\lambda_1 & 0\\ 0 & \lambda_2} \myvec{X^\prime \\ Y^\prime} = 0
-\end{equation}
-\begin{equation}\label{eq12}
-	\text{where } X^\prime = Xu_1 + Yu_2 \text{ and } Y^\prime = Xv_1 + Yv_2
-\end{equation}
-\begin{equation}\label{eq13}
-	\implies \lambda_1 (X^\prime)^2 + \lambda_2 (Y^\prime)^2 = 0
-\end{equation}
-\eqref{eq13} is called \textit{Spectral decomposition} of matrix
-\begin{align}
-	\implies X^\prime &= \pm \sqrt{-\frac{\lambda_2}{\lambda_1}}Y^\prime\\	
-	u_1X + u_2Y &= \pm \sqrt{-\frac{\lambda_2}{\lambda_1}}(v_1X + v_2Y)\\
-	\label{eq14}u_1(x-\alpha) + u_2(y-\beta) &= \pm \sqrt{-\frac{\lambda_2}{\lambda_1}}(v_1(x-\alpha) + v_2(y-\beta))
-\end{align}
 Substituting in \eqref{eq6}
 \begin{align}
 	\label{eq16}\myvec{ 12 & \frac{7}{2}\\\frac{7}{2} & -10}\myvec{\alpha \\ \beta} = \myvec{\frac{-13}{2} \\ -\frac{45}{2}} \\
@@ -277,6 +228,22 @@ Substituting in \eqref{eq6}
 	\label{eq18}\vec{V} &= \myvec{ 12 & \frac{7}{2}\\ \frac{7}{2} & -10}\\
 	\label{eq19}\vec{P} &= \myvec{\frac{-\sqrt{533} - 22}{2} & \frac{-22 + \sqrt{533}}{2}\\ 1 & 1}\\
 	\label{eq20}\vec{D} &= \myvec{1 + \frac{\sqrt{533}}{2} & 0\\ 0 & 1 - \frac{\sqrt{533}}{2}}
+\end{align}
+Under \textit{Affine transformation},
+\begin{align}
+	\vec{x} &= \vec{M}\vec{y} + c\\
+	\myvec{x \\ y} &= \myvec{1 & 0 \\ 0 & 1} \myvec{X \\ Y} + \myvec{\alpha \\ \beta}\\
+	\label{eq7}\myvec{x \\ y} &= \myvec{X+\alpha \\ Y+\beta}
+\end{align}
+ under transformation \eqref{eq7} will become,
+\begin{equation}\label{eq13}
+	\implies \lambda_1 (X^\prime)^2 + \lambda_2 (Y^\prime)^2 = 0
+\end{equation}
+\eqref{eq13} is called \textit{Spectral decomposition} of matrix
+\begin{align}
+	\implies X^\prime &= \pm \sqrt{-\frac{\lambda_2}{\lambda_1}}Y^\prime\\	
+	u_1X + u_2Y &= \pm \sqrt{-\frac{\lambda_2}{\lambda_1}}(v_1X + v_2Y)\\
+	\label{eq14}u_1(x-\alpha) + u_2(y-\beta) &= \pm \sqrt{-\frac{\lambda_2}{\lambda_1}}(v_1(x-\alpha) + v_2(y-\beta))
 \end{align}
 Substituting \eqref{eq17}, \eqref{eq19} and \eqref{eq20} in \eqref{eq14},
 \begin{multline}\label{eq21}
@@ -303,7 +270,6 @@ The angle between the lines can be expressed in terms of normal vectors
 \begin{align}
 	\vec{n_1}=\myvec{4\\5} , \quad \vec{n_2}=\myvec{3\\-2}
 \end{align}
-as
 \begin{align}
 	\cos\theta=\frac{\vec{n_1}^T\vec{n_2}}{\norm{\vec{n_1}}\norm{\vec{n_2}}} \\
 				\nonumber \\
