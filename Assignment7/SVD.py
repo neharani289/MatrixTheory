@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import numpy as np
 
 M = np.array([[1,0],[0,1],[1/3,1/2]])
@@ -26,7 +20,7 @@ x = V.T.dot(Sinv).dot(U.T).dot(b)
 print("the foot of the perpendicular",x)
 
 
-# In[ ]:
+
 
 
 
