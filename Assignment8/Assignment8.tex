@@ -137,7 +137,21 @@
 	\renewcommand{\thetable}{\theenumi}
 	\counterwithout{figure}{section}
 	\counterwithout{figure}{subsection}
+	%\begin{document}	
+	%	\begin{titlepage}
+	%	\begin{center}
+	%		\vspace*{1cm}
+	%		
+	%		\textbf{ \huge{Assignment 1}}
+	%		\vspace{1.5cm}
+	%		
+	%		\textbf{Ritesh Kumar} \\
+	%		textbf{(EE20RESCH11005)}\\
+	%		\textbf{Communication and Signal Processing}
+	\date{Today}
 	
+	%	\end{center}
+	%	\end{titlepage}
 \begin{abstract}
 This document deals with matrix multiplication.
 \end{abstract}
@@ -157,30 +171,41 @@ https://github.com/neharani289/MatrixTheory/tree/master/Assignment8
 Let 
 \begin{align}
 \vec{A} = \myvec{2&-1&1\\1&2&1},
-\vec{B}= \myvec{3\\1\\-1},
-\vec{C}=\myvec{1&-1}
+& \vec{B}= \myvec{3\\1\\-1},
+& \vec{C}=\myvec{1&-1}
 \end{align}
 Compute $\vec{ABC}$ and $\vec{CAB}$.
  \section{\textbf{Solution}} 
  %
- %
- $\vec{ABC}$ = ($\vec{AB})$ $\vec{C}$
+
+\Given,
+
  \begin{align}
- &\vec{AB}= \myvec{2&-1&1\\1&2&1}\myvec{3\\1\\-1}\\
- &\vec{AB}=\myvec{6-1-1\\3+2-1}\\
- &\vec{AB}=\myvec{4\\4}
- \end{align}
+&\vec{A} = \myvec{2&-1&1\\1&2&1}\\
+& \vec{B}= \myvec{3\\1\\-1}\\
+& \vec{C}=\myvec{1&-1}
+end{align}
+Take,
+& $\vec{ABC}$ = ($\vec{AB})$ $\vec{C}$
  \begin{align}
-     &\vec{ABC}= \myvec{4\\4} \myvec{1&-1}\\
-    &\vec{ABC}= \myvec{4 & -4\\4 & -4}
+&\vec{AB}= \myvec{2&-1&1\\1&2&1}\myvec{3\\1\\-1}\\
+&\vec{AB}=\myvec{6-1-1\\3+2-1}\\
+&\vec{AB}=\myvec{4\\4}
  \end{align}
-& $\vec{CAB}$ = $\vec{C}$($\vec{AB}$) \begin{align}
-& \vec{CAB} = \myvec{1&-1} \myvec{4&-4\\4&-4}\\
+&Now,
+ \begin{align}
+&\vec{ABC}= \myvec{4\\4} \myvec{1&-1}\\
+&\vec{ABC}= \myvec{4 & -4\\4 & -4}
+ \end{align}
+& similarly,
+& $\vec{CAB}$ = $\vec{C}$($\vec{AB}$) 
+\begin{align}
+&\vec{CAB} = \myvec{1&-1} \myvec{4\\4}\\
 &\implies \vec{CAB} = \myvec{0}
  \end{align}
-  therefore,
+ & therefore,
 \begin{align}
-   & \vec{ABC}=\myvec{4&-4\\4&-4}\\
-   & \vec{CAB}=\myvec{0}
+& \vec{ABC}=\myvec{4&-4\\4&-4}\\
+&  \vec{CAB}=\myvec{0}
 \end{align}
 \end{document}
