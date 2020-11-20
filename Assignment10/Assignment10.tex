@@ -1,3 +1,4 @@
+
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 %
 \usepackage{setspace}
@@ -150,55 +151,66 @@ https://github.com/neharani289/MatrixTheory/blob/master/Assignment10
 \section{\textbf{Problem}}
 Let \textbf{T} be the linear transformation from  $\mathbb{R}^3$ into $\mathbb{R}^2$ defined by
 \begin{align}
- \textbf{T} \brak{x_1, x_2,x_3} = \brak{x_1+x_2,2x_3-x_1}. 
+ \textbf{T} \brak{x_1, x_2,x_3} = \brak{x_1+x_2,2x_3-x_1}\label{T}
  \end{align}
-\intertext{If} $\mathbb{B}$ & = \brak{\alpha_1,\alpha_2,\alpha_3} 
-\intertext {and} $\mathbb{B}'$ &= \brak{\beta_1,\beta_2}
+\intertext{If} $\beta$ & = \brak{\alpha_1,\alpha_2,\alpha_3} 
+\intertext {and} $\beta'$ &= \brak{\beta_1,\beta_2}
 where 
 \begin{align}
 \vec{\alpha_1}  = \brak{1,0,-1},  \vec{\alpha_2} = \brak{1,1,1}, \vec{\alpha_3} = \brak{1,0,0}\nonumber\end{align}
 \begin{align}
 \vec{\beta_1} = \brak{0,1}, \vec{\beta_2} = \brak{1,0}\nonumber
 \end{align}
-What is the matrix of \textbf{T} relative to the pair $\mathbb{B}$,$\mathbb{B'}$
+What is the matrix of \textbf{T} relative to the pair $\beta$, $\beta'$
 \section{\textbf{Solution}}
-Let,
+Let
 \begin{align}
-\mathbb{B} &= \brak{\alpha_1,\alpha_2,\alpha_3}\\
-\mathbb{B} &= {\brak{1,0,-1},\brak{1,1,1},\brak{1,0,0}}
+\beta &= \brak{\alpha_1,\alpha_2,\alpha_3}
+\end{align}
+\begin{align}
+\implies \beta=\myvec{1&1&1\\0&1&0\\-1&1&0}
 \end{align}
 and
 \begin{align}
-    \mathbb{B'} &= \brak{\beta_1,\beta_2}\nonumber\\
- \mathbb{B'}   &={\brak{0,1},\brak{1,0}}
+\beta' = \{\beta_1 , \beta_2\}
 \end{align}
-We know that,
 \begin{align}
-[T\alpha]_{\mathbb{B}^{'}}=\vec{A}[\alpha]_{\mathbb{B}}\label{T}
+\implies \beta'=\myvec{0&1\\1&0}
 \end{align}
-where $\vec{A}$ is called the matrix of T relative to ordered basis $\mathbb{B}$, $\mathbb{B}^{'}$ and $\alpha$ is any vector in the space formed using basis vectors $\mathbb{B}$.
+T is defined by
+\begin{align}
+   T\brak{\vec{x}} = \vec{A}\vec{x}
+ \end{align}
+using equation \eqref{T}
 \begin{align}
 T\myvec{x_1\\x_2\\x_3}=\myvec{x_1+x_2\\2x_3-x_1}
 \end{align}
-Now, to find the matrix of T relative to the pair $\mathsbb{B'}$ $\mathsbb{B}$ 
+R.H.S of the equation can be written as a product of 2$\times$3 and 3$\times$1 matrices,
 \begin{align}
-T\myvec{\alpha_1}=T\myvec{1,0,-1}=\myvec{1\\-3}\nonumber\\
-T\myvec{\alpha_2}=T\myvec{1,1,1}=\myvec{2\\1}\nonumber\\
-T\myvec{\alpha_3}=T\myvec{1,0,0}=\myvec{1\\0}
+=\myvec{1&1&0\\-1&0&2}\myvec{x_1\\x_2\\x_3}\\
+\implies \vec{A}=\myvec{1&1&0\\-1&0&2}
 \end{align}
-thus, the transformation matrix is,
+Now,
+ \begin{align}
+    T\brak{\beta}=\myvec{1&1&0\\-1&0&2}{\beta}
+\end{align}
 \begin{align}
-\myvec{1&2&1\\-3&1&0}
+    T\brak{\beta}=\myvec{1&1&0\\-1&0&2}\myvec{1&1&1\\0&1&0\\-1&1&0}
+    =\myvec{1&2&1\\-3&1&-1}
+\end{align}
+To find relative matrix we will use row reduce augmented matrix.
+\begin{align}
+    \myvec{1&2&1&\vline&0&1\\-3&1&-1&\vline&1&0}
 \end{align}
 \begin{align}
-[T\alpha]_{\beta^{'}}=\vec{A}[\alpha]_{\beta}\label{T}
+\myvec{1&2&1&\vline&0&1\\-3&1&-1&\vline&1&0}\xleftrightarrow{R_1\leftrightarrow R_2}\myvec{-3&1&-1&\vline&1&0\\1&2&1&\vline&0&1}
 \end{align}
-Now, since the transformation has to be found relative to the pair $\mathbb{B}$, $\mathbb{B'}$ row reduce the augmented matrix,
+Hence the matrix of \textbf{T} in the order basis of $\beta^{'}$
 \begin{align}
-\myvec{0&1&\vline&1&2&1\\1&0&\vline&-3&1&0}\xleftrightarrow{R_1\leftrightarrow R_2}\myvec{1&0&\vline&-3&1&0\\0&1&\vline&1&2&1}
+    \vec{B}=\myvec{-3&1&-1\\1&2&1}
 \end{align}
-Thus,the matrix of \textbf{T} wrt to $\mathbb{B}$, $\mathbb{B'}$ is 
-\begin{align}
-\myvec{-3&1&0\\1&2&1}
-\end{align}
+ Therefore matrix of relative to the pair $\beta$ , $\beta^{'}$  
+ \begin{align}
+  T\brak{\vec{\beta}}=\vec{A}\beta = \vec{B}\beta^{'}=\myvec{-3&1&-1\\1&2&1}\vec{\beta^{'}}   
+ \end{align}
 \end{document}
