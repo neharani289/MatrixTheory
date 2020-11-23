@@ -142,7 +142,7 @@ https://github.com/neharani289/MatrixTheory/Assignment11
 \section{\textbf{Problem}}
 (UGC-june2017,71) : \\
 %
-Let \textbf{V} be the vector space of polynomials of degree at most 3 in a varible x with coefficients in $\mathbb{R}$. Let \textbf{T}=d/dx be the linear transformation of \textbf{V} to itself given by differentiation.\\
+Let \textbf{V} be the vector space of polynomials of degree at most 3 in a variable x with coefficients in $\mathbb{R}$. Let \textbf{T}=d/dx be the linear transformation of \textbf{V} to itself given by differentiation.\\
 
 Which of the following are correct?\\
 \begin{enumerate}
@@ -151,18 +151,46 @@ Which of the following are correct?\\
 \item There is a basis with respect to which the matrix of \textbf{T} is nilpotent.
 \item The matrix of \textbf{T} with respect to the basis \myvec{1,1+x,1+x+x^2,1+x+x^2+x^3} is diagonal.
 \end{enumerate}
+\section{\textbf{Definition and Result used}}
+\begin{longtable}{|l|l|}
+	\hline
+	\multirow{3}{*}{Nilpotent Matrix} 
+	& \\
+	& 1. If  all the eigen values of matrix is zero then it is said to nilpotent matrix \\
+	& 
+   2. Determinant and trace of nilpotent matrix are always zero.
+	\hline
+	\multirow{3}{*}{Invertible Matrix } & \\
+	&
+	A matrix is said to be invertible matrix if its determinant is non zero.
+    	\hline
+    	\multirow{3}{*}{Diagonal matrix} & \\
+&
+diagonal matrix is a matrix in which the entries outside the main diagonal are all zero.
+    \hline
+\end{longtable}
 \section{\textbf{Solution}}
 	\begin{longtable}{|l|l|}
-		\hline
-		\multirow{3}{*}{Checking whether  matrix $\vec{T}$ is nilpotent} &\\
-	 &	Let \textbf{V}= P_3(x)\\
-
+	\hline
+\multirow{3}{*}{Given} &\\
+& $T$ : $P_3 \xrightarrow{} P_3$ \\ 
+& \\
+& $T:V\xrightarrow{}V$ be the linear operator given by differentiation wrt $x$\\
+& $T(P(x)) \xrightarrow{}$ $P'(x)$ \\
+& \\
+& $A$ be the matrix of $T$ wrt some basis for $V$ \\
+& Assume basis for $V$ be $\{1,x,x^2,x^3\}$ \\
+         \hline
+\end{longtable}
+\newpage
+\begin{longtable}{|l|l|}
+	\hline
+		\multirow{3}{*}{Checking whether  matrix of $\vec{T}$ is nilpotent} &\\
+	
      & \textbf{T}:\textbf{V}\rightarrow \textbf{V}\\
      & \textbf{T}(P(x)) = P'(x)\\
-     
-
-		&Standard basis of P(x)=\brak{1,x,x^2,x^3}\\
-		& differentiating wrt x;\\
+		&
+		differentiating wrt x to find matrix $\vec{A}$;\\
     	& \qquad \qquad \qquad 
        \vec{T}(1)=0=a_1x+b_1x+c_1x^2+d_1x^3\\
        & \qquad \qquad \qquad 
@@ -172,33 +200,29 @@ Which of the following are correct?\\
         & \qquad \qquad \qquad 
         \vec{T}(x^3)=3x^2=a_4+b_4x+c_4x^2+d_4x^3\\
     & 
-         Representing \textbf{T} in matrix form ;\\
+         Representing $\vec{A}$ in matrix form ;\\
     &
-   \qquad\qquad\qquad \vec{T}=\myvec{0&1&0&0\\0&0&2&0\\0&0&0&3\\0&0&0&0}\\
+   \qquad\qquad\qquad \vec{A}=\myvec{0&1&0&0\\0&0&2&0\\0&0&0&3\\0&0&0&0}\\
    &
-  from the above matrix \textbf{T} we can say it is nilpotent matrix.
+  from the above matrix of \textbf{T} we can say it is nilpotent matrix.
     \hline
-\end{longtable}
-\newpage
-	\begin{longtable}{|l|l|}
-	\hline
-		\multirow{3}{*}{ Checking for eigen value of  $\vec{T}$} 
+		\multirow{3}{*}{ Checking for eigen value matrix of $T$} 
 		&
 		
-		\vec{T}=\myvec{0-\lambda&1&0&0\\0&0-\lambda&2&0\\0&0&0-\lambda&3\\0&0&0&0-\lambda}\\
+		\vec{A}=\myvec{0-\lambda&1&0&0\\0&0-\lambda&2&0\\0&0&0-\lambda&3\\0&0&0&0-\lambda}\\
 		&
 		\implies \lambda=0\\
 		&\\
 	   	\hline
-	   \multirow{3}{*}{ Checking whether $\vec{T}$ is invertible } & \\
+	   \multirow{3}{*}{ Checking whether matrix of  $\vec{T}$ is invertible } & \\
 	   &
 	   Since \det{T}=0. \\
 	   &
 	   Therefore $\vec{T}$ is not invertible 
 	   	\hline
-	   	\multirow{3}{*}{Matrix $\vec{T}$
+	   	\multirow{3}{*}{Matrix of $\vec{T}$
 	   	is diagonal matrix} & \\
-	   			& Let basis of P(x) be B'=\brak{1,1+x,1+x+x^2,1+x+x^2+x^3}\\
+	   			& Let basis be $B'$=\brak{1,1+x,1+x+x^2,1+x+x^2+x^3}\\
 		& Differentiating wrt x ;\\
     	&
        \vec{T}(1)=0=a_1x+b_1(1+x)+c_1(1+x+x^2)+d_1(1+x+x^2+x^3)\\
@@ -211,7 +235,7 @@ Which of the following are correct?\\
         &
      \qquad\qquad\qquad\qquad+d_4(1+x+x^2+x^3)\\
     &
-    \qquad\qquad\qquad \vec{T}=\myvec{0&1&-1&-1\\0&0&2&-1\\0&0&0&3\\0&0&0&0}\\
+    \qquad\qquad\qquad \vec{B}=\myvec{0&1&-1&-1\\0&0&2&-1\\0&0&0&3\\0&0&0&0}\\
    &
      above matrix is not a diagonal matrix
 	   	\hline
