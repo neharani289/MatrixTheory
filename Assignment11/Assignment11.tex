@@ -142,37 +142,40 @@ https://github.com/neharani289/MatrixTheory/Assignment11
 \section{\textbf{Problem}}
 (UGC-june2017,71) : \\
 %
-Let \textbf{V} be the vector space of polynomials of degree at most 3 in a variable x with coefficients in $\mathbb{R}$. Let \textbf{T}=d/dx be the linear transformation of \textbf{V} to itself given by differentiation.\\
+Let $V$ be the vector space of polynomials of degree at most 3 in a variable $x$ with coefficients in $\mathbb{R}$. Let $T$=$d/dx$ be the linear transformation of $V$ to itself given by differentiation.\\
 
 Which of the following are correct?\\
 \begin{enumerate}
-\item $\vec{T}$ is invertible
-\item 0 is an eigenvalue of $\vec{T}$
-\item There is a basis with respect to which the matrix of \textbf{T} is nilpotent.
-\item The matrix of \textbf{T} with respect to the basis \myvec{1,1+x,1+x+x^2,1+x+x^2+x^3} is diagonal.
+\item $T$ is invertible
+\item $0$ is an eigenvalue of $T$
+\item There is a basis with respect to which the matrix of $T$ is nilpotent.
+\item The matrix of $T$ with respect to the basis $\{1,1+x,1+x+x^2,1+x+x^2+x^3\}$ is diagonal.
 \end{enumerate}
+%
+%
+%
 \section{\textbf{Definition and Result used}}
 \begin{longtable}{|l|l|}
-	\hline
-	\multirow{3}{*}{Nilpotent Matrix} 
-	& \\
-	& 1. If  all the eigen values of matrix is zero then it is said to nilpotent matrix \\
-	& 
-   2. Determinant and trace of nilpotent matrix are always zero.
-	\hline
-	\multirow{3}{*}{Invertible Matrix } & \\
-	&
-	A matrix is said to be invertible matrix if its determinant is non zero.
-    	\hline
-    	\multirow{3}{*}{Diagonal matrix} & \\
+\hline
+\multirow{3}{*}{Nilpotent Matrix} 
+& \\
+& 1. If  all the eigen values of matrix is zero then it is said to nilpotent matrix \\
+& 
+2. Determinant and trace of nilpotent matrix are always zero.\\
+\hline
+\multirow{3}{*}{Invertible Matrix } & \\
 &
-diagonal matrix is a matrix in which the entries outside the main diagonal are all zero.
-    \hline
+A matrix is said to be invertible matrix if its determinant is non zero.\\
+\hline
+\multirow{3}{*}{Diagonal matrix} & \\
+&
+diagonal matrix is a matrix in which the entries outside the main diagonal are all zero.\\
+\hline
 \end{longtable}
 \section{\textbf{Solution}}
-	\begin{longtable}{|l|l|}
-	\hline
-\multirow{3}{*}{Given} &\\
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{Given       } &\\
 & $T$ : $P_3 \xrightarrow{} P_3$ \\ 
 & \\
 & $T:V\xrightarrow{}V$ be the linear operator given by differentiation wrt $x$\\
@@ -180,71 +183,70 @@ diagonal matrix is a matrix in which the entries outside the main diagonal are a
 & \\
 & $A$ be the matrix of $T$ wrt some basis for $V$ \\
 & Assume basis for $V$ be $\{1,x,x^2,x^3\}$ \\
-         \hline
+\hline
 \end{longtable}
 \newpage
 \begin{longtable}{|l|l|}
-	\hline
-		\multirow{3}{*}{Checking whether  matrix of $\vec{T}$ is nilpotent} &\\
-	
-     & \textbf{T}:\textbf{V}\rightarrow \textbf{V}\\
-     & \textbf{T}(P(x)) = P'(x)\\
-		&
-		differentiating wrt x to find matrix $\vec{A}$;\\
-    	& \qquad \qquad \qquad 
-       \vec{T}(1)=0=a_1x+b_1x+c_1x^2+d_1x^3\\
-       & \qquad \qquad \qquad 
-       \vec{T}(x)=1=a_2+b_2x+c_2x^2+d_2x^3\\
-       & \qquad \qquad \qquad 
-       \vec{T}(x^2)=2x=a_3+b_3x+c_3x^2+d_3x^3\\
-        & \qquad \qquad \qquad 
-        \vec{T}(x^3)=3x^2=a_4+b_4x+c_4x^2+d_4x^3\\
-    & 
-         Representing $\vec{A}$ in matrix form ;\\
-    &
-   \qquad\qquad\qquad \vec{A}=\myvec{0&1&0&0\\0&0&2&0\\0&0&0&3\\0&0&0&0}\\
-   &
-  from the above matrix of \textbf{T} we can say it is nilpotent matrix.
-    \hline
-		\multirow{3}{*}{ Checking for eigen value matrix of $T$} 
-		&
-		
-		\vec{A}=\myvec{0-\lambda&1&0&0\\0&0-\lambda&2&0\\0&0&0-\lambda&3\\0&0&0&0-\lambda}\\
-		&
-		\implies \lambda=0\\
-		&\\
-	   	\hline
-	   \multirow{3}{*}{ Checking whether matrix of  $\vec{T}$ is invertible } & \\
-	   &
-	   Since \det{T}=0. \\
-	   &
-	   Therefore $\vec{T}$ is not invertible 
-	   	\hline
-	   	\multirow{3}{*}{Matrix of $\vec{T}$
-	   	is diagonal matrix} & \\
-	   			& Let basis be $B'$=\brak{1,1+x,1+x+x^2,1+x+x^2+x^3}\\
-		& Differentiating wrt x ;\\
-    	&
-       \vec{T}(1)=0=a_1x+b_1(1+x)+c_1(1+x+x^2)+d_1(1+x+x^2+x^3)\\
-       &
-       \vec{T}(1+x)=1=a_2+b_2(1+x)+c_2(1+x+x^2)+d_2(1+x+x^2x^3)\\
-       &
-       \vec{T}(1+x+x^2)=1+2x=a_3+b_3(1+x)+c_3(1+x+x^2)+d_3(1+x+x^2+x^3)\\
-        &  
-        \vec{T}(1+x+x^2+x^3)=1+2x+3x^2=a_4+b_4(1+x)+c_4(1+x+x^2)\\
-        &
-     \qquad\qquad\qquad\qquad+d_4(1+x+x^2+x^3)\\
-    &
-    \qquad\qquad\qquad \vec{B}=\myvec{0&1&-1&-1\\0&0&2&-1\\0&0&0&3\\0&0&0&0}\\
-   &
-     above matrix is not a diagonal matrix
-	   	\hline
-	   	\multirow{3}{*}{Conclusion} & \\
-	&
-	Thus we can conclude \\
-		&
-		Option 2) and 3) are correct.\\
-	   	&\\
-	   	\hline
-    \end{longtable}
+\hline
+\multirow{3}{*}{Checking whether } &\\
+& $T:V\rightarrow V$\\matrix of $T$ is nilpotent
+& $TP(x) = P'(x)$\\
+&Differentiating wrt $x$ to find matrix $A$;\\
+& \qquad \qquad \qquad 
+$T(1)$ = $0$ = $a_1x+b_1x+c_1x^2+d_1x^3$\\
+& \qquad \qquad \qquad 
+$T(x)$= $1$ = $a_2+b_2x+c_2x^2+d_2x^3$\\
+& \qquad \qquad \qquad 
+$T(x^2)$ = $2x$ = $a_3+b_3x+c_3x^2+d_3x^3$\\
+& \qquad \qquad \qquad 
+$T(x^3)$ = $3x^2$ = $a_4+b_4x+c_4x^2+d_4x^3$\\
+& 
+Representing $A$ in matrix form ;\\
+&
+\qquad\qquad\qquad
+$A$=$\myvec{0&1&0&0\\0&0&2&0\\0&0&0&3\\0&0&0&0}$\\
+&
+from the above matrix of $T$ we can say it is nilpotent matrix.\\
+\hline
+\multirow{3}{*}{ Checking eigen value of matrix $T$ } &\\
+&
+$A=\myvec{0-\lambda&1&0&0\\0&0-\lambda&2&0\\0&0&0-\lambda&3\\0&0&0&0-\lambda}$\\
+&
+$\implies \lambda=0$\\
+&\\
+\hline
+\multirow{3}{*}{Checking whether matrix} & \\
+&Since $\det{T}$= $0$. \\ of  $T$ is invertible 
+&Therefore $T$ is not invertible \\
+&\\
+\hline
+\multirow{3}{*}{Checking whether Matrix of $T$} & \\
+& Let basis be $B'$ = $\{1,1+x,1+x+x^2,1+x+x^2+x^3\}$\\is diagonal matrix
+& Differentiating wrt $x$ ;\\
+&
+$T(1) = 0 = a_1x+b_1(1+x)+c_1(1+x+x^2)+d_1(1+x+x^2+x^3)$\\
+&
+$T(1+x)= 1 = a_2+b_2(1+x)+c_2(1+x+x^2)+d_2(1+x+x^2x^3)$\\
+&
+$T(1+x+x^2) = 1+2x = a_3+b_3(1+x)+c_3(1+x+x^2)$\\
+&
+\qquad\qquad\qquad+$d_3(1+x+x^2+x^3)$\\
+&  
+$T(1+x+x^2+x^3) = 1+2x+3x^2 = a_4+b_4(1+x)+c_4(1+x+x^2)$\\
+&
+\qquad\qquad\qquad\qquad+$d_4(1+x+x^2+x^3)$\\
+&
+\qquad\qquad\qquad $B=\myvec{0&1&-1&-1\\0&0&2&-1\\0&0&0&3\\0&0&0&0}$\\
+&
+above matrix is not a diagonal matrix\\
+&\\
+\hline
+\multirow{3}{*}{Conclusion} & \\
+&
+Thus we can conclude \\
+&
+Option 2) and 3) are correct.\\
+&\\
+\hline
+\end{longtable}
 \end{document}
