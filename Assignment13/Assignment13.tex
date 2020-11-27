@@ -139,6 +139,7 @@ Download the latex-tikz codes from
 \begin{lstlisting}
 https://github.com/neharani289/MatrixTheory/Assignment13
 \end{lstlisting}
+\bigskip
 \section{\textbf{Problem}}
 (hoffman/page198/9) : \\
 %
@@ -153,6 +154,7 @@ Show that
 %
 %
 %
+\bigskip\\
 \section{\textbf{Solution}}
 \begin{longtable}{|l|l|}
 \hline
@@ -173,19 +175,21 @@ a_{n1}&a_{n2}&\cdots &a_{nn}}$\\
 & $c_1d_1+....+c_kd_k = trace(A)$\\
 &\\
 \hline
-&\\
-\multirow{3}{*}{Claim} & \\
-&  $det(xI-A) = x^2 - trace(A)x^{n-1}+...+(-1)^ndet(A)$ \\
-&\\
-\hline
 \end{longtable}
 \newpage
 \renewcommand{\thetable}{1}
 \begin{longtable}{|l|l|}
 \hline
+\multirow{3}{*}{Claim} & \\
+&  $det(xI-A) = x^2 - trace(A)x^{n-1}+...+(-1)^ndet(A)$ \\
+&\\
+\hline
 \multirow{3}{*}{To prove that the coefficient} &\\
-& Consider , the  method of induction to proof for $2x2$matrix.\\ 
+& Proof by method of induction for n=2\\ 
+&\\
+& Let, $A_2$ be $2x2$matrix.\\ 
 of $x^{n-1}$ is $trace(A)$ 
+&\\
 & $\vec{A_2}=\myvec{a_{11}&a_{12}\\a_{21}&a_{22}}$\\
 & $\det(xI-A)= \left|
                 \begin{array}{ccc}
