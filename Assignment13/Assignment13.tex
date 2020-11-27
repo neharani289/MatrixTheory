@@ -1,0 +1,272 @@
+\documentclass[journal,12pt]{IEEEtran}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\newcommand\myemptypage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+\onecolumn
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 13}
+\author{Neha Rani\\EE20MTECH14014}
+\maketitle
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%
+Download the latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/neharani289/MatrixTheory/Assignment13
+\end{lstlisting}
+\section{\textbf{Problem}}
+(hoffman/page198/9) : \\
+%
+Let $A$ be an $nxn$ matrix with characteristics polynomial\\
+\begin{align}
+& f = (x-c_1)^{d_1}....(x-c_k)^{d_k} \nonumber
+\end{align}
+Show that
+\begin{align}
+& c_1d_1+....+c_kd_k = trace(A)\nonumber
+\end{align}
+%
+%
+%
+\section{\textbf{Solution}}
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{Given} & \\
+& Let $A$ be an $nxn$ \\
+&\\
+& $A = \myvec{a_{11}&a_{12}&\cdots &a_{1n} \\
+a_{21}&a_{22}&\cdots &a_{2n} \\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1}&a_{n2}&\cdots &a_{nn}}$\\
+&\\
+& and Characteristics polynomial\\
+&\\
+&  $f= (x-c_1)^{d_1}....(x-c_k)^{d_k}$\\
+&\\
+\hline
+\multirow{3}{*}{To proof} & \\
+& $c_1d_1+....+c_kd_k = trace(A)$\\
+&\\
+\hline
+&\\
+\multirow{3}{*}{Claim} & \\
+&  $det(xI-A) = x^2 - trace(A)x^{n-1}+...+(-1)^ndet(A)$ \\
+&\\
+\hline
+\end{longtable}
+\newpage
+\renewcommand{\thetable}{1}
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{To prove that the coefficient} &\\
+& Consider , the  method of induction to proof for $2x2$matrix.\\ 
+of $x^{n-1}$ is $trace(A)$ 
+& $\vec{A_2}=\myvec{a_{11}&a_{12}\\a_{21}&a_{22}}$\\
+& $\det(xI-A)= \left|
+                \begin{array}{ccc}
+                (x-a_{11}) & -a_{12}\\
+                a_{21}& a_{22}\\
+                \end{array} \right|$  \\
+&\\
+& $\implies det(xI-A)$ = $x^2 - (a_{11}+a_{22})x+(a_{11}a_{22}-a_{12}a_{21})$\\
+ &\\
+& $\boxed {trace(A_2) = a_{11}+a_{12}}$ and the coefficient of $\boxed{x^{n-1} = x}$.\\
+&\\
+& Therefore , claim is true for $n=2$. \\
+&\\
+& Assume that it is true for upto $n-1$.\\
+& \\
+& Then, Coefficient of $x^{n-2}$ will be\\
+& $s=a_{22}+a_{33}+a_{44}+....+a_{nn}$ for the matrix, $A_{n-1Xn-1},$\\
+&\\
+& $A_{n-1} = \myvec{a_{22}&a_{23}&\cdots &a_{2n} \\
+a_{32}&a_{33}&\cdots &a_{3n} \\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n2}&a_{n3}&\cdots &a_{nn}}$\\
+&\\
+\hline
+\caption{Proof for Coefficients of $x^{n-1}$}
+\label{table:1}
+\end{longtable}
+\newpage
+\renewcommand{\thetable}{2}
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{To prove that the} & \\
+claim is true for $n$ 
+& $\det(xI-A)= \left|
+                \begin{array}{cccc}
+                (x-a_{11}) & -a_{12} & \cdots & -a_{1n}\\
+                -a_{21}& (x-a_{22}) & \cdots & -a_{2n}\\
+                \vdots & \vdots & \ddots & \vdots\\
+                -a_{n1} & -a_{n2} & \cdots & (x-a_{nn})\\
+                \end{array} \right|$  \\
+&\\
+& $det(xI-A)= (x-a_{11})cofactor(a_{11}) + a_{21}cofactor(-a_{21})$\\
+&\qquad\qquad\qquad $+ ...-(-1)^{n+1}cofactor(-a_{n1})$\\
+&\\
+& $det(xI-A) = (x-a_{11})(x^{n-1}-sx^{n-2}+..)+a_{21}$(polynomial of degree $n-2$)\\
+& \qquad\qquad\qquad+..-$(-1)^{n+1}a_{n1}$(polynomial of degree $n-2$)\\
+&\\
+& $det(xI-A) = x^n - (a_{11}+s)x^{n-1}$+ polynomial of degree at most $n-2$\\
+&\\
+& $det(xI-A)= x^n -(a_{11}+a_{22}+..+a_{nn})x^{n-1}$+polynomial of degree\\ &\qquad\qquad\qquad\qquad\qquad \qquad\qquad \qquad at most $n-2$\\
+&\\
+& $\implies det(xI-A)= x^n-trace(A)x^{n-1}$ + polynomial of degree atmost $n-2$ \\
+&\\
+& Given characteristic polynomial of $A$ is,\\
+&   $f= (x-c_1)^{d_1}....(x-c_k)^{d_k}$\\
+& where,\\
+& $d_1 + d_2 +...+d_k = n$\\
+&\\
+& Since,expansion of $(x-r)^{t} = x^{t}-rtx^{t-1}+..+(-1)^{t}r^{t}$\\ 
+&\\
+& Therefore,\\
+& $f= (x-c_1)^{d_1}....(x-c_k)^{d_k}$\\
+& $f= (x^{d_1}-c_1d_1x^{d_1-1}+..)..(x^{d_k}-c_kd_kx^{d_k-1}+..)$\\
+&\\
+& $\implies\boxed {f = x^n - (c_1d_1+c_2d
+_2+...+c_kd_k)x^{n-1}+..}$\\
+& Since,\\
+& $f=det(xI-A)$\\
+& $\implies x^n - (c_1d_1+c_2d
+_2+...+c_kd_k)x^{n-1}+.. = x^n-trace(A)x^{n-1}+$ \\
+& \qquad\qquad\qquad\qquad \qquad polynomial of degree atmost $n-2$\\
+&\\ 
+& By comparing corresponding terms in above equation ;\\
+&\\
+& $\boxed {c_1d_1+c_2d
+_2+...+c_kd_k = trace(A)}$\\
+&\\
+& Hence, Proved.\\
+&\\
+\hline
+\caption{Solution Summary}
+\label{table:2}
+\end{longtable}
+\end{document}
