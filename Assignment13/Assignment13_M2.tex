@@ -1,0 +1,219 @@
+\documentclass[journal,12pt]{IEEEtran}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\newcommand\myemptypage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+\onecolumn
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 13}
+\author{Neha Rani\\EE20MTECH14014}
+\maketitle
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%
+Download the latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/neharani289/MatrixTheory/Assignment13
+\end{lstlisting}
+\bigskip
+\section{\textbf{Problem}}
+(hoffman/page198/9) : \\
+%
+Let $\vec{A}$ be an $n\times n$ matrix with characteristics polynomial\\
+\begin{align}
+& f = (x-c_1)^{d_1}....(x-c_k)^{d_k} \nonumber
+\end{align}
+Show that
+\begin{align}
+& c_1d_1+....+c_kd_k = trace(A)\nonumber
+\end{align}
+%
+%
+%
+\bigskip\\
+\section{\textbf{Solution}}
+\renewcommand{\thetable}{1}
+\begin{longtable}{|l|l|}
+\hline
+\multirow{3}{*}{Given} & \\
+& Let $\vec{A}$ be an $n\times n$ \\
+&\\
+& $\vec{A} = \myvec{a_{11}&a_{12}&\cdots &a_{1n} \\
+a_{21}&a_{22}&\cdots &a_{2n} \\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1}&a_{n2}&\cdots &a_{nn}}$\\
+&\\
+& and Characteristics polynomial\\
+&\\
+&  $f= (x-c_1)^{d_1}....(x-c_k)^{d_k}$\\
+&\\
+\hline
+\multirow{3}{*}{To prove} & \\
+& $c_1d_1+....+c_kd_k = trace(A)$\\
+&\\
+\hline
+\multirow{3}{*}{proof} & \\
+& Characteristics polynomial; \\
+&  $f= (x-c_1)^{d_1}....(x-c_k)^{d_k}$\\
+& here,\\
+& $c_1,...,c_k$ are the distinct eigen values.\\
+& and $d_1,...,d_k$ denotes the repetition of eigen values\\
+&\\
+& Therefore,\\
+& $\boxed{c_1d_1+c_2d_2+...+c_kd_k = \sum_{i} \lambda_i}$ =Sum of all eigen values.\\
+&\\
+
+
+& Using JCF concept;\\
+&\\
+& For every matrix $\vec{A}$ there exist a invertible matrix $\vec{P}$ such that\\
+& $\vec{PAP^{-1} = J}$ where $J$ has Jordan Canonical form.\\ 
+&\\
+& $\vec{J}=\myvec{J_1& & & \\& J_2 & \\& &  \ddots \\& & & J_p}$ ,each block $J_i$ is a square matrix of the form \\
+&\\
+& $\vec{J_i}= \myvec{\lambda_i&1 & &\\ &\lambda_i&\ddots&\\&&\ddots &1\\&&&\lambda_i}$ \\
+&where, J is called Jordan normal form of $\vec{A}$ and $\vec{J_i}$ is called a Jordan block of $\vec{A}$\\
+&\\
+& Consider, two $n\times n$ matrices B and C and they are  called similar if\\
+& there exists an invertible $n\times n$ matrix P such that $\vec{C=PBP^{-1}}$\\ 
+& which implies $B$ and $C$ have the same eigen values. \\
+&\\
+& $\implies trace(ABC)=trace(BAC)=trace(CAB)$\\ 
+&\\ 
+& $\implies trace(A)=trace(P^{-1}JP)=trace(PP^{-1}J)=trace(J)$\\
+&\\
+& $\boxed{trace(J)=\sum_{i} \lambda_i}$ where, $\lambda_i$ are eigen values of $\vec{A}$.\\
+&\\
+& $\boxed{\implies c_1d_1+c_2d_2+...+c_kd_k = \sum_{i} \lambda_i = trace{A}}$\\
+&\\
+& Hence, Proved.\\
+&\\
+\hline
+\caption{Solution Summary}
+\label{table:1}
+\end{longtable}
+\end{document}
