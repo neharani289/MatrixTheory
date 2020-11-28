@@ -156,6 +156,7 @@ Show that
 %
 \bigskip\\
 \section{\textbf{Solution}}
+\renewcommand{\thetable}{1}
 \begin{longtable}{|l|l|}
 \hline
 \multirow{3}{*}{Given} & \\
@@ -175,17 +176,12 @@ a_{n1}&a_{n2}&\cdots &a_{nn}}$\\
 & $c_1d_1+....+c_kd_k = trace(A)$\\
 &\\
 \hline
-\end{longtable}
-\newpage
-\renewcommand{\thetable}{1}
-\begin{longtable}{|l|l|}
-\hline
 \multirow{3}{*}{Claim} & \\
 &  $det(xI-A) = x^2 - trace(A)x^{n-1}+...+(-1)^ndet(A)$ \\
 &\\
 \hline
 \multirow{3}{*}{To prove that the coefficient} &\\
-& Proof by method of induction for n=2\\ 
+& Consider the method of induction to proof for n=2\\ 
 &\\
 & Let, $A_2$ be $2x2$matrix.\\ 
 of $x^{n-1}$ is $trace(A)$ 
@@ -206,20 +202,13 @@ of $x^{n-1}$ is $trace(A)$
 & Assume that it is true for upto $n-1$.\\
 & \\
 & Then, Coefficient of $x^{n-2}$ will be\\
-& $\boxed{s=a_{22}+a_{33}+a_{44}+....+a_{nn}}$ for the matrix, $A_{n-1Xn-1},$\\
+& $\boxed {s=a_{22}+a_{33}+a_{44}+....+a_{nn}}$ for the matrix, $A_{n-1Xn-1},$\\
 &\\
 & $A_{n-1} = \myvec{a_{22}&a_{23}&\cdots &a_{2n} \\
 a_{32}&a_{33}&\cdots &a_{3n} \\
 \vdots & \vdots & \ddots & \vdots\\
 a_{n2}&a_{n3}&\cdots &a_{nn}}$\\
 &\\
-\hline
-\caption{Proof for Coefficients of $x^{n-1}$}
-\label{table:1}
-\end{longtable}
-\newpage
-\renewcommand{\thetable}{2}
-\begin{longtable}{|l|l|}
 \hline
 \multirow{3}{*}{To prove that the} & \\
 claim is true for $n$ 
@@ -241,7 +230,7 @@ claim is true for $n$
 &\\
 & $det(xI-A)= x^n -(a_{11}+a_{22}+..+a_{nn})x^{n-1}$+polynomial of degree\\ &\qquad\qquad\qquad\qquad\qquad \qquad\qquad \qquad at most $n-2$\\
 &\\
-& $\implies det(xI-A)= x^n-trace(A)x^{n-1}$ + polynomial of degree atmost $n-2$ \\
+& $\implies det(xI-A)= x^n-trace(A)x^{n-1}$ + polynomial of degree atmost $n-2$\\
 &\\
 & Given characteristic polynomial of $A$ is,\\
 &   $f= (x-c_1)^{d_1}....(x-c_k)^{d_k}$\\
@@ -271,6 +260,6 @@ _2+...+c_kd_k = trace(A)}$\\
 &\\
 \hline
 \caption{Solution Summary}
-\label{table:2}
+\label{table:1}
 \end{longtable}
 \end{document}
