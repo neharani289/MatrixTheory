@@ -149,7 +149,7 @@ Let $\vec{A}$ be an $n\times n$ matrix with characteristics polynomial\\
 \end{align}
 Show that
 \begin{align}
-& c_1d_1+....+c_kd_k = trace(A)\nonumber
+& c_1d_1+....+c_kd_k = tr(A)\nonumber
 \end{align}
 %
 %
@@ -173,7 +173,7 @@ a_{n1}&a_{n2}&\cdots &a_{nn}}$\\
 &\\
 \hline
 \multirow{3}{*}{To prove} & \\
-& $c_1d_1+....+c_kd_k = trace(A)$\\
+& $c_1d_1+....+c_kd_k = tr(A)$\\
 &\\
 \hline
 \multirow{3}{*}{proof} & \\
@@ -186,29 +186,12 @@ a_{n1}&a_{n2}&\cdots &a_{nn}}$\\
 & Therefore,\\
 & $\boxed{c_1d_1+c_2d_2+...+c_kd_k = \sum_{i} \lambda_i}$ =Sum of all eigen values.\\
 &\\
-
-
-& Using JCF concept;\\
+& As we know , \\
+& Trace of a matrix is the sum of its eigen values. \\
 &\\
-& For every matrix $\vec{A}$ there exist a invertible matrix $\vec{P}$ such that\\
-& $\vec{PAP^{-1} = J}$ where $J$ has Jordan Canonical form.\\ 
-&\\
-& $\vec{J}=\myvec{J_1& & & \\& J_2 & \\& &  \ddots \\& & & J_p}$ ,each block $J_i$ is a square matrix of the form \\
-&\\
-& $\vec{J_i}= \myvec{\lambda_i&1 & &\\ &\lambda_i&\ddots&\\&&\ddots &1\\&&&\lambda_i}$ \\
-&where, J is called Jordan normal form of $\vec{A}$ and $\vec{J_i}$ is called a Jordan block of $\vec{A}$\\
-&\\
-& Consider, two $n\times n$ matrices B and C and they are  called similar if\\
-& there exists an invertible $n\times n$ matrix P such that $\vec{C=PBP^{-1}}$\\ 
-& which implies $B$ and $C$ have the same eigen values. \\
-&\\
-& $\implies trace(ABC)=trace(BAC)=trace(CAB)$\\ 
-&\\ 
-& $\implies trace(A)=trace(P^{-1}JP)=trace(PP^{-1}J)=trace(J)$\\
-&\\
-& $\boxed{trace(J)=\sum_{i} \lambda_i}$ where, $\lambda_i$ are eigen values of $\vec{A}$.\\
-&\\
-& $\boxed{\implies c_1d_1+c_2d_2+...+c_kd_k = \sum_{i} \lambda_i = trace{A}}$\\
+& $\implies tr(A) = \sum _{i} \lambda_i$\\
+& therefore,\\
+& $\boxed{\implies c_1d_1+c_2d_2+...+c_kd_k = \sum_{i} \lambda_i = tr(A)}$\\
 &\\
 & Hence, Proved.\\
 &\\
