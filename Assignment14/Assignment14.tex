@@ -195,6 +195,7 @@ Find an invertible matrix $\vec{P}$ such that $\vec{P^{-1}AP}$ and $\vec{P^{-1}B
 \end{table}
 \newpage
 \section{\textbf{Solution}}
+\bigskip
 \renewcommand{\thetable}{2}
 \begin{longtable}{|c|l|l|}
 \hline
@@ -206,8 +207,10 @@ Find an invertible matrix $\vec{P}$ such that $\vec{P^{-1}AP}$ and $\vec{P^{-1}B
      Characteristic Polynomial
      &$p\brak{x}=\mydet{x\Vec{I}-\Vec{A}}$
      &$p\brak{x}=\mydet{x\Vec{I}-\Vec{B}}$\\
+     &&\\
      &$\qquad = \mydet{x-1&-1\\-1&x-1}$ 
      &$\qquad = \mydet{x-1&-a\\-a&x-1}$ \\
+     &&\\
      &$\qquad=\brak{x-1}\brak{x-1}-1$
      &$\qquad=\brak{x-1}\brak{x-1}-a^{2}$\\
      &&\\
@@ -216,39 +219,53 @@ Find an invertible matrix $\vec{P}$ such that $\vec{P^{-1}AP}$ and $\vec{P^{-1}B
      Characteristic values
      &$p\brak{x}=0$
      &$p\brak{x}=0$\\
+     &&\\
      &$x\brak{x-1}=0$
      &$\brak{x-1}^{2}-a^{2}=0$\\
+     &&\\
      &$\lambda_1=0$ ,$\lambda_2=2$
      &$\mu_1=\brak{1-a}$ , $\mu_2=\brak{1+a}$\\ 
      &&\\
 \hline
      &&\\
      Basis for Characteristics Values
-     &$(\vec{A}-\lambda\vec{I})\vec{b}=0$     &$(\vec{B}-\mu\vec{I})\vec{b}=0$\\
+     &$(\vec{A}-\lambda_i\vec{I})\vec{X}=0$     &$(\vec{B}-\mu_i\vec{I})\vec{X}=0$\\
      &&\\
-     & For $\lambda_1 = 0$
-     & For $\mu_1 = \brak{1-a}$\\
+     & $\implies$ For $\lambda_1 = 0$
+     & $\implies$ For $\mu_1 = \brak{1-a}$\\
      &&\\
-     & $\vec{b_1} = \myvec{-1\\1}$
-     & $\vec{b_1} = \myvec{-1\\1}$\\
+     & $\myvec{1&1\\1&1}\myvec{x_1\\x_2}= 0$
+     & $\myvec{a&a\\a&a}\myvec{x_1\\x_2}= 0$\\
      &&\\
-     & For $\lambda_2 = 2$
-      & For $\mu_2 = \brak{1+a}$\\
+     & So, $\vec{b_1} = \myvec{-1\\1}$
+     & So, $\vec{b_1} = \myvec{-1\\1}$\\
      &&\\
-     & $\vec{b_2} = \myvec{1\\1}$
-     & $\vec{b_2} = \myvec{1\\1}$\\
+     & $\implies$ For $\lambda_2 = 2$
+     & $\implies$ For $\mu_2 = \brak{1+a}$\\
+     &&\\
+     & $\myvec{-1&1\\1&-1}\myvec{x_1\\x_2}= 0$
+     & $\myvec{-a&a\\a&-a}\myvec{x_1\\x_2}= 0$\\
+     &&\\
+     & So, $\vec{b_2} = \myvec{1\\1}$
+     & So, $\vec{b_2} = \myvec{1\\1}$\\
      &&\\
 \hline
      &&\\
      Invertible matrix 
-     & $\implies \vec{P}=\myvec{-1&1\\1&1}$
-     &$ \implies \vec{P}=\myvec{-1&1\\1&1}$\\
+     & Let $\vec{P} = \myvec{\vec{b_1} &\vec{b_2}}$
+     & Let $\vec{P} = \myvec{\vec{b_1} &\vec{b_2}}$\\
+     &&\\
+     & Then,
+     & Then,\\
+     &&\\
+     & $\vec{P}=\myvec{-1&1\\1&1}$
+     & $ \implies \vec{P}=\myvec{-1&1\\1&1}$\\
      &&\\
 \hline
      &&\\
      Verification
      & $\Lambda_A=\myvec{0&0\\0&2}$ &
-       $\Lambda_B=\myvec{1-a&0\\0&1+a}$\\
+     $\Lambda_B=\myvec{1-a&0\\0&1+a}$\\
      &&\\
      & $\Lambda_{A}=\vec{P^{-1}AP}$&$\Lambda_{B}=\vec{P^{-1}BP}$\\
      &&\\
@@ -263,11 +280,11 @@ Find an invertible matrix $\vec{P}$ such that $\vec{P^{-1}AP}$ and $\vec{P^{-1}B
      \hline
      &&\\
      Conclusion
-     & $\vec{P}=\myvec{-1&1\\1&1}$
-     & $\vec{P}=\myvec{-1&1\\1&1}$\\
+     &  $\vec{P}=\myvec{-1&1\\1&1}$
+     &  $\vec{P}=\myvec{-1&1\\1&1}$\\
      &&\\
 \hline
-\caption{Solution Summary}
+\caption{Finding an Invertible matrix}
 \label{table:2}
 \end{longtable}
 \end{document}
