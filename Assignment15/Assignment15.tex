@@ -153,40 +153,83 @@ Find a projection $\vec{E}$ which projects $\mathbb{R}^{2}$ onto the subspace sp
 \multirow{3}{*}{Given} 
     	& \\
      	&  Let $\myvec{x\\y} \in \mathbb{R}^{2}$\\
-     	& $\myvec{x\\y} = a\myvec{1\\-1} +b\myvec{1\\2}$\\
+     	&{\begin{align}\label{eq1}
+     	& \myvec{x\\y} = a\myvec{1\\-1} +b\myvec{1\\2}
+     	\end{align}}\\
      	& where $\myvec{a\\b}$ is representation of $\myvec{x\\y}$ in new basis.\\
      	&\\
 \hline
 \multirow{3}{*}{To find} 
      	&\\
-        &$\vec{E}\myvec{x\\y} = a\myvec{1\\-1}$\\
-     	&\\
+        &{\begin{align}\label{eq2}
+        \vec{E}\myvec{x\\y} = a\myvec{1\\-1}
+        \end{align}}\\
+     	
 \hline
 \multirow{3}{*}{Finding a Projection $\vec{E}$} & \\
        & We know in standard order basis ;\\
-       & $\myvec{x\\y} : \myvec{1\\0}x + \myvec{0\\1}y$\\
+       & {\begin{align}\label{eq3}
+       \myvec{x\\y} : \myvec{1\\0}x + \myvec{0\\1}y
+       \end{align}}\\
        &\\
        & Express $\myvec{1\\0},\myvec{0\\1}$ in the basis       $\myvec{1\\-1},\myvec{1\\2}$\\
       &\\
-      & $\myvec{1\\0} = p\myvec{1\\-1} + q\myvec{1\\2}$\\
+      & {\begin{align}\label{eq4}
+      \myvec{1\\0} = p\myvec{1\\-1} + q\myvec{1\\2}
+      \end{align}}\\
       & where $\myvec{p\\q}$ is representation of $\myvec{1\\0}$ in  the new basis.\\
-      & $\implies \myvec{p\\q}=\myvec{\frac{2}{3}\\\frac{1}{3}}$\\
-      &\\
+      &{\begin{align}\label{eq5}
+      &\implies \myvec{p\\q}=\myvec{\frac{2}{3}\\\frac{1}{3}}
+      &\end{align}}\\
       & similarly;\\
-      & $\myvec{0\\1}= r\myvec{1\\-1} +s \myvec{1\\2}$ \\
-      & $\implies \myvec{r\\s} = \myvec{\frac{-1}{3}\\\frac{1}{3}}$\\
+      & {\begin{align}\label{eq6} 
+      \myvec{0\\1}= r\myvec{1\\-1} +s \myvec{1\\2} 
+      \end{align}}\\
+      & {\begin{align}\label{eq7}
+      \implies \myvec{r\\s} = \myvec{\frac{-1}{3}\\\frac{1}{3}}
+      \end{align}}\\
       &\\
-      & Substitute in standard order basis we get;\\
-      & $\myvec{x\\y} : \myvec{\frac{2}{3}x-\frac{1}{3}y}\myvec{1\\-1}+\myvec{\frac{1}{3}x+\frac{1}{3}y}\myvec{1\\2}$\\
+      & Substitute \eqref{eq5} and \eqref{eq7} in \eqref{eq3} we get;\\
+      &{\begin{align}\label{eq8}
+      & \myvec{x\\y}: \myvec{\frac{2}{3}\\\frac{1}{3}}x
+      +\myvec{\frac{-1}{3}\\\frac{1}{3}}y = \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{1}{3}&\frac{1}{3}}\myvec{x\\y}
+      \end{align}}\\
       &\\
-      & Since, $\vec{E}\myvec{x\\y} = a\myvec{1\\-1}$\\
+      & From \eqref{eq1} and \eqref{eq8} ; \\
+      & {\begin{align} \label{eq9} 
+      \myvec{x\\y} : \myvec{\frac{2}{3} &\frac{-1}{3}}\myvec{1\\-1}\myvec{x\\y}+\myvec{\frac{1}{3} &\frac{1}{3}}\myvec{1\\2}\myvec{x\\y}
+      \end{align}}\\
+      &\\
+      & From \eqref{eq2} and \eqref{eq9};\\ 
+      & {\begin{align} \label{eq10} 
+      \vec{E}\myvec{x\\y} = \myvec{\frac{2}{3}x-\frac{1}{3}y} \myvec{1\\-1}
+      \end{align}}\\
       & \\
-      & $\implies\vec{E} \myvec{x\\y} = \myvec{\frac{2}{3}x-\frac{1}{3}y}\myvec{1\\-1}$\\
-      &\\
-      & $\implies\boxed{ \vec{E}= \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}}$\\
+      &{\begin{align}
+     \implies \vec{E}\myvec{x\\y} = \myvec{\frac{2}{3}\\\frac{-2}{3}}x + \myvec{\frac{-1}{3}\\\frac{1}{3}}y
+     \end{align}}\\
+     &{\begin{align}
+     \vec{E}\myvec{x\\y} = \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}&\frac{1}{3}}\myvec{x\\y}
+      \end{align}}\\
+     & Hence,\\
+      &{\begin{align}
+      \implies{ \vec{E}= \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}}
+      \end{align}}\\
       &\\
 \hline
-\caption{Solution Summary}
+\multirow{3}{*}{Verification} & \\
+& If $n\times n$ matrix $\vec{E}$ is projecion matrix, then\\
+	&\\
+	&$\qquad\qquad\qquad \vec{E}^2=\vec{E}$\\
+	&\\
+  &{\begin{align}
+  \vec{E^{2}} = \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}\myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}
+  \implies \vec{E}=\vec{E^{2}}=\myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}
+  \end{align}}\\
+  & Hence, Verified.\\
+  &\\
+	\hline
+\caption{Finding Projection Matrix}
 \label{table:1}
 \end{longtable}
 \end{document}
