@@ -1,76 +1,3 @@
-\documentclass[journal,12pt]{IEEEtran}
-\usepackage{longtable}
-\usepackage{setspace}
-\usepackage{gensymb}
-\singlespacing
-\usepackage[cmex10]{amsmath}
-\newcommand\myemptypage{
-	\null
-	\thispagestyle{empty}
-	\addtocounter{page}{-1}
-	\newpage
-}
-\usepackage{amsthm}
-\usepackage{mdframed}
-\usepackage{mathrsfs}
-\usepackage{txfonts}
-\usepackage{stfloats}
-\usepackage{bm}
-\usepackage{cite}
-\usepackage{cases}
-\usepackage{subfig}
-
-\usepackage{longtable}
-\usepackage{multirow}
-
-\usepackage{enumitem}
-\usepackage{mathtools}
-\usepackage{steinmetz}
-\usepackage{tikz}
-\usepackage{circuitikz}
-\usepackage{verbatim}
-\usepackage{tfrupee}
-\usepackage[breaklinks=true]{hyperref}
-\usepackage{graphicx}
-\usepackage{tkz-euclide}
-
-\usetikzlibrary{calc,math}
-\usepackage{listings}
-    \usepackage{color}                                            %%
-    \usepackage{array}                                            %%
-    \usepackage{longtable}                                        %%
-    \usepackage{calc}                                             %%
-    \usepackage{multirow}                                         %%
-    \usepackage{hhline}                                           %%
-    \usepackage{ifthen}                                           %%
-    \usepackage{lscape}     
-\usepackage{multicol}
-\usepackage{chngcntr}
-
-\DeclareMathOperator*{\Res}{Res}
-
-\renewcommand\thesection{\arabic{section}}
-\renewcommand\thesubsection{\thesection.\arabic{subsection}}
-\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
-
-\renewcommand\thesectiondis{\arabic{section}}
-\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
-\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
-
-
-\hyphenation{op-tical net-works semi-conduc-tor}
-\def\inputGnumericTable{}                                 %%
-
-\lstset{
-%language=C,
-frame=single, 
-breaklines=true,
-columns=fullflexible
-}
-\begin{document}
-\onecolumn
-
-\newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{lemma}{Lemma}[section]
@@ -161,74 +88,72 @@ Find a projection $\vec{E}$ which projects $\mathbb{R}^{2}$ onto the subspace sp
 \hline
 \multirow{3}{*}{To find} 
      	&\\
-        &{\begin{align}\label{eq2}
+        &
+        {\begin{align}\label{eq2}
         \vec{E}\myvec{x\\y} = a\myvec{1\\-1}
         \end{align}}\\
      	
 \hline
 \multirow{3}{*}{Finding a Projection $\vec{E}$} & \\
-       & We know in standard order basis ;\\
-       & {\begin{align}\label{eq3}
-       \myvec{x\\y} : \myvec{1\\0}x + \myvec{0\\1}y
-       \end{align}}\\
+       & As, $\myvec{1\\-1},\myvec{1\\2}$ are linearly independent.\\
        &\\
-       & Express $\myvec{1\\0},\myvec{0\\1}$ in the basis       $\myvec{1\\-1},\myvec{1\\2}$\\
-      &\\
-      & {\begin{align}\label{eq4}
-      \myvec{1\\0} = p\myvec{1\\-1} + q\myvec{1\\2}
-      \end{align}}\\
-      & where $\myvec{p\\q}$ is representation of $\myvec{1\\0}$ in  the new basis.\\
-      &{\begin{align}\label{eq5}
-      &\implies \myvec{p\\q}=\myvec{\frac{2}{3}\\\frac{1}{3}}
-      &\end{align}}\\
-      & similarly;\\
-      & {\begin{align}\label{eq6} 
-      \myvec{0\\1}= r\myvec{1\\-1} +s \myvec{1\\2} 
-      \end{align}}\\
-      & {\begin{align}\label{eq7}
-      \implies \myvec{r\\s} = \myvec{\frac{-1}{3}\\\frac{1}{3}}
-      \end{align}}\\
-      &\\
-      & Substitute \eqref{eq5} and \eqref{eq7} in \eqref{eq3} we get;\\
-      &{\begin{align}\label{eq8}
-      & \myvec{x\\y}: \myvec{\frac{2}{3}\\\frac{1}{3}}x
-      +\myvec{\frac{-1}{3}\\\frac{1}{3}}y = \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{1}{3}&\frac{1}{3}}\myvec{x\\y}
-      \end{align}}\\
-      &\\
-      & From \eqref{eq1} and \eqref{eq8} ; \\
-      & {\begin{align} \label{eq9} 
-      \myvec{x\\y} : \myvec{\frac{2}{3} &\frac{-1}{3}}\myvec{1\\-1}\myvec{x\\y}+\myvec{\frac{1}{3} &\frac{1}{3}}\myvec{1\\2}\myvec{x\\y}
-      \end{align}}\\
-      &\\
-      & From \eqref{eq2} and \eqref{eq9};\\ 
-      & {\begin{align} \label{eq10} 
-      \vec{E}\myvec{x\\y} = \myvec{\frac{2}{3}x-\frac{1}{3}y} \myvec{1\\-1}
-      \end{align}}\\
-      & \\
-      &{\begin{align}
-     \implies \vec{E}\myvec{x\\y} = \myvec{\frac{2}{3}\\\frac{-2}{3}}x + \myvec{\frac{-1}{3}\\\frac{1}{3}}y
+       & Therefore,\{$\myvec{1\\-1},\myvec{1\\2}\}$ is a basis of $\mathbb{R}^{2}$\\
+       &\\
+       & As $\myvec{x\\y} \in \mathbb{R}^{2}$\\
+       &
+       {\begin{align}
+       \implies \myvec{x\\y} = a\myvec{1\\-1} +b\myvec{1\\2}
+       \end{align}}\\
+       
+       
+       &
+       {\begin{align}
+        \implies \myvec{a\\b} = \myvec{\frac{2x-y}{3}\\\frac{x+y}{3}}
+       \end{align}}\\
+       
+     & Projection of $\myvec{x\\y}$ on subspace spanned by $\myvec{1\\-1}$;\\
+     
+     
+     &
+     {\begin{align}
+     & \vec{E}\myvec{x\\y} = a\myvec{1\\-1}
      \end{align}}\\
+     
+     
      &{\begin{align}
-     \vec{E}\myvec{x\\y} = \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}&\frac{1}{3}}\myvec{x\\y}
-      \end{align}}\\
-     & Hence,\\
-      &{\begin{align}
-      \implies{ \vec{E}= \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}}
-      \end{align}}\\
-      &\\
+     & \implies\vec{E}\myvec{x\\y} = \brak{\frac{2x-y}{3}}\myvec{1\\-1}
+     \end{align}}\\
+     
+     
+     &{\begin{align}
+     & \implies\vec{E}\myvec{x\\y} = \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}\myvec{x\\y}
+     \end{align}}\\
+     
+     
+     &{\begin{align}
+     \implies \vec{E}=\myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}
+     \end{align}}\\
+     
+     
 \hline
 \multirow{3}{*}{Verification} & \\
-& If $n\times n$ matrix $\vec{E}$ is projecion matrix, then\\
-	&\\
-	&$\qquad\qquad\qquad \vec{E}^2=\vec{E}$\\
-	&\\
-  &{\begin{align}
-  \vec{E^{2}} = \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}\myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}
-  \implies \vec{E}=\vec{E^{2}}=\myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}
-  \end{align}}\\
+
+ 
+     & If $n\times n$ matrix $\vec{E}$ is projection matrix, then\\
+     &\\
+	 &$\qquad\qquad\qquad \vec{E}^2=\vec{E}$\\
+     &\\
+	
+	
+     &{\begin{align}
+     \vec{E^{2}} = \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}\myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}
+     \implies \vec{E}=\vec{E^{2}}=\myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}
+     \end{align}}\\
+  
+  
   & Hence, Verified.\\
   &\\
-	\hline
+\hline
 \caption{Finding Projection Matrix}
 \label{table:1}
 \end{longtable}
