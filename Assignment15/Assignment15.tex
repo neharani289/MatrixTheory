@@ -154,15 +154,15 @@ Find a projection $\vec{E}$ which projects $\mathbb{R}^{2}$ onto the subspace sp
     	& \\
      	&  Let $\vec{x} \in \mathbb{R}^{2}$\\
      	&{\begin{align}\label{eq1}
-     	& \vec{x} = a\myvec{1\\-1} +b\myvec{1\\2}
+     	& \vec{x} = \vec{a}\myvec{1\\-1} +\vec{b}\myvec{1\\2}
      	\end{align}}\\
-     	& where $\myvec{a\\b}$ is representation of $\vec{x}$ in new basis.\\
+     	& where $\myvec{\vec{a}\\\vec{b}}$ is representation of $\vec{x}$ in new basis.\\
 \hline
 \multirow{3}{*}{To find} 
      	&\\
         &
         {\begin{align}\label{eq2}
-        \vec{E} \brak{\vec{x}} = \myvec{1\\-1}
+        \vec{E} \brak{\vec{x}} = \vec{a}\myvec{1\\-1}
         \end{align}}\\
      	
 \hline
@@ -173,32 +173,30 @@ Find a projection $\vec{E}$ which projects $\mathbb{R}^{2}$ onto the subspace sp
        &\\
        & As $\vec{x} \in \mathbb{R}^{2}$\\
        &{\begin{align}
-       \implies \vec{x} = a\myvec{1\\-1} +b\myvec{1\\2}
+       \implies \vec{x} = \vec{a}\myvec{1\\-1} +\vec{b}\myvec{1\\2}
        \end{align}}\\
        \hline
        &{\begin{align}
-       \implies \vec{x} = \myvec{1&1\\-1&2}\myvec{a\\b}
+       \implies \vec{x} = \myvec{1&1\\-1&2}\myvec{\vec{a}\\\vec{b}}
         \end{align}}\\
         &{\begin{align}
-        \implies \myvec{a\\b}=\myvec{1&1\\-1&2}^{-1}\vec{x}
+        \implies \myvec{\vec{a}\\\vec{b}}=\myvec{1&1\\-1&2}^{-1}\vec{x}
         \end{align}}\\
-       
-       
-       
        &
        {\begin{align}
-       \implies \myvec{a\\b} = \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{1}{3}&\frac{1}{3}}\vec{x}
+       \implies \myvec{\vec{a}\\\vec{b}} = \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{1}{3}&\frac{1}{3}}\vec{x}
        \end{align}}\\
        & Therefore,\\
-       &{\begin{align}
+       &{\begin{align}\label{eq3}
           \vec{a} &=\myvec{\frac{2}{3}&\frac{-1}{3}}\vec{x}
        \end{align}}\\
        
      & Projection of $\vec{x}$ on subspace spanned by $\myvec{1\\-1}$;\\
      &
-     {\begin{align}
+     {\begin{align}\label{eq4}
      & \vec{E}\brak{\vec{x}} = \vec{a}\myvec{1\\-1}
      \end{align}}\\
+     & Substituting \eqref{eq3} in \eqref{eq4}\\
      &
      {\begin{align}
        \vec{E}\brak{\vec{x}} = \myvec{1\\-1}\myvec{\frac{2}{3}& \frac{-1}{3}}\vec{x}
@@ -212,7 +210,6 @@ Find a projection $\vec{E}$ which projects $\mathbb{R}^{2}$ onto the subspace sp
        \hline
        \multirow{3}{*}{Verification} & \\
 & If $n\times n$ matrix $\vec{E}$ is projection matrix, then\\
-	&\\
 	&$\qquad\qquad\qquad \vec{E}^2=\vec{E}$\\
   &{\begin{align}
   \vec{E^{2}} = \myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}\myvec{\frac{2}{3}&\frac{-1}{3}\\\frac{-2}{3}& \frac{1}{3}}
