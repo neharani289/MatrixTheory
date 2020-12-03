@@ -141,32 +141,27 @@ https://github.com/neharani289/MatrixTheory/Assignment16
 \end{lstlisting}
 \section{\textbf{Problem}}
 %
-(hoffman/page226/9) : 
-\bigskip\\
+(hoffman/page226/9) : \\
 Give an example of two $4\times 4$ nilpotent matrices which have the same minimal polynomial(they necessarily have the same characteristic polynomial) but which are not similar. 
 \bigskip
 \section{\textbf{Definitions}}
-\bigskip
 \renewcommand{\thetable}{1}
 \begin{table}[ht!]
 \centering
 \begin{tabular}{|p{5cm}|p{13cm}|}
     \hline
 	\multirow{3}{*}{Characteristic Polynomial} 
-	& \\
 	& For an $n\times n$ matrix $\vec{A}$, characteristic polynomial is defined by,\\
 	&\\
 	& $\qquad\qquad\qquad p\brak{x}=\mydet{x\Vec{I}-\Vec{A}}$\\
 	&\\
 	\hline
-
 	\multirow{3}{*}{Minimal Polynomial} 
 	&\\
 	& Minimal polynomial $m\brak{x}$ is the smallest factor of characteristic polynomial\\
 	& $p\brak{x}$ such that,\\
 	&\\
 	& $\qquad \qquad \qquad m\brak{\vec{A}}=0$\\
-	&\\
     \hline
     \multirow{3}{*}{Cayley-Hamilton Theorem}
     &\\
@@ -175,6 +170,23 @@ Give an example of two $4\times 4$ nilpotent matrices which have the same minima
     &$\qquad \qquad \qquad p\brak{\vec{A}}=\vec{0}$\\
     &\\
     \hline
+    \multirow{3}{*}{Similar matrices}&\\
+    &  Two   matrices $\vec{A}$ and $\vec{B}$ are said to be similar if\\
+    &{\begin{enumerate}
+        \item $det(\vec{A}) = det(\vec{B})$
+        
+        \item $tr (\vec{A}) = tr (\vec{B})$
+       
+        \item $rank(\vec{A})=rank(\vec{B})$
+    \end{enumerate}}\\
+    \hline
+    \multirow{3}{*}{Nilpotent Matrix}&\\
+    & A square matrix $\vec{A}$ is called a Nilpotent matrix if there exist a positive integer $'m'$ such that $\vec{A}^{m}=\vec{0}$ and $'m'$ is called Index of nilpotent matrix $\vec{A}$.\\
+    &\\
+   & The determinant and trace of a nilpotent matrix are always zero.\\
+   &\\
+    \hline
+    
 \end{tabular}
 \label{table:1}
     \caption{Definitions}
@@ -222,7 +234,7 @@ Give an example of two $4\times 4$ nilpotent matrices which have the same minima
     &  Minimal polynomial always annihilates its matrix.\\
     &\\
     \hline
-    & $\qquad\qquad\qquad m_A(A) = \vec{A} =\myvec{0&1&0&0\\0&0&0&0\\0&0&0&1\\0&0&0&0} \neq\vec{0}$\\
+    & $\qquad\qquad\qquad m_A(\vec{A}) = \vec{A} =\myvec{0&1&0&0\\0&0&0&0\\0&0&0&1\\0&0&0&0} \neq\vec{0}$\\
     &\\
     &$\qquad\qquad\qquad m_A\brak{\vec{A}}=\vec{A}^2 =\myvec{0&1&0&0\\0&0&0&0\\0&0&0&1\\0&0&0&0}\myvec{0&1&0&0\\0&0&0&0\\0&0&0&1\\0&0&0&0}=\vec{0}$\\
     &\\
@@ -231,7 +243,7 @@ Give an example of two $4\times 4$ nilpotent matrices which have the same minima
     & $\implies x^2$ is a minimal polynomial of Matrix $\vec{A}$\\
     &\\
     & For Matrix $\vec{B}$;\\
-    &$\qquad\qquad\qquad m_B(B) = \vec{B} =\myvec{0&0&0&0\\0&0&0&0\\0&0&0&1\\0&0&0&0} \neq\vec{0}$\\
+    &$\qquad\qquad\qquad m_B(\vec{B}) = \vec{B} =\myvec{0&0&0&0\\0&0&0&0\\0&0&0&1\\0&0&0&0} \neq\vec{0}$\\
     &\\
     &$\qquad\qquad\qquad m_B\brak{\vec{B}}=\vec{B}^2 =\myvec{0&0&0&0\\0&0&0&0\\0&0&0&1\\0&0&0&0}\myvec{0&0&0&0\\0&0&0&0\\0&0&0&1\\0&0&0&0}=\vec{0}$\\
     &\\
@@ -244,26 +256,38 @@ Give an example of two $4\times 4$ nilpotent matrices which have the same minima
     \hline
 	\multirow{3}{*}{}&\\
 	Checking whether Matrix $\vec{A}$ & \\
-    and $\vec{B}$ are same .
+    and $\vec{B}$ are similar .
     & $ \vec{A}=\myvec{0&1&0&0\\0&0&0&0\\0&0&0&1\\0&0&0&0}$\\
     &\\
    & rank of matrix = no of linearly independent row or column vectors in the matrix \\
    &\\
    &  $rank\brak{ \vec{A} }= 2$\\
    &\\
+   & $tr(\vec{A})= 0 $\\
+   &\\
+   & $det(\vec{A})= 0$\\
+   &\\
+   \hline
    & $ \vec{B}=\myvec{0&0&0&0\\0&0&0&0\\0&0&0&1\\0&0&0&0}$\\
    &\\
    &  $rank\brak{ \vec{B} }= 1$\\
+   &\\
+   & $tr(\vec{B})= 0 $\\
+   &\\
+   & $det(\vec{B})= 0$\\
+   &\\
    &$\implies rank\brak{\vec{A}} \neq rank\brak{\vec{B}}$\\
    &\\
-   & Therefore, Matrix $\vec{A}$ and $\vec{B}$ are not same.\\
+   & Therefore, Matrix $\vec{A}$ and $\vec{B}$ are not similar.\\
    &\\
 	\hline
 	\multirow{3}{*}{Conclusion}
 	&{\begin{enumerate}
 	    \item Characteristics polynomial for both Matrix $\vec{A}$ and $\vec{B}$ are same.
+	    
 	    \item Minimal polynomial for both matrix are same i.e $m_A\brak{x}=m_B\brak{x}=x^2$.
-	    \item Matrix $\vec{A}$ and $\vec{B}$ are not same .
+	    
+	    \item Matrix $\vec{A}$ and $\vec{B}$ are not similar .
 	\end{enumerate}}\\
 	\hline
 	\caption{Solution Summary}
