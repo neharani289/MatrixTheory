@@ -156,34 +156,32 @@ If $\vec{A}$ is a $2\times2$ matrix over $\mathbb{R}$ with $\det\brak{\vec{A}+\v
 \hline
     \multirow{3}{*}{Given} 
     &\\
-    & Let $\vec{A}$ be a $2\times2$ matrix over $\mathbb{R}$.\\
+     & Let $\vec{A}$ be a $2\times2$ matrix over $\mathbb{R}$.\\
+     &\\
+    & $\qquad\qquad\qquad\vec{A}=\myvec{\lambda_1&0\\0&\lambda_2}$\\
     &\\
-    &$\qquad\qquad\qquad \vec{A}=\myvec{a&b\\c&d}$\\
+    & $\implies$ Eigen value of $\vec{A}=\lambda_1,\lambda_2$\\
     &\\
-    & $\qquad\qquad\qquad \det{\vec{A}} = \mydet{a&b\\c&d}$\\ &\\
-    & $\qquad\qquad\qquad\boxed{\det{\vec{A}} = ad-bc}$\\
+    & $\qquad\qquad\qquad\brak{\vec{A}+\vec{I}}=\myvec{\lambda_1+1&0\\0&\lambda_2+1}$\\
     &\\
-    & $\qquad\qquad\qquad\boxed{ tr(\vec{A})=\brak{a+d}}$\\
+    & $\implies$ Eigen value of $\brak{\vec{A}+\vec{I}} = \lambda_1+1,\lambda_2+1$\\
     &\\
-    & Now, \\
-    & $\qquad\qquad\qquad(\vec{A}+\vec{I}) = \myvec{a+1&b\\c&d+1}$\\
-    & {\begin{align}\label{eq1}\det(\vec{A}+\vec{I})=\mydet{a+1&b\\c&d+1}=\brak{a+1}\brak{d+1}-\brak{bc}\end{align}}\\
+    & Since,\\
+    &$\qquad\qquad \qquad \det\brak{\vec{A}+\vec{I}}=1+\det(\vec{A})$\\
+    &\\
+     & Trace of any matrix is sum of its eigen values. \\
+    &\\
+    & Determinant of matrix is product of its eigen values \\
+    &\\
+    & $\qquad\qquad\implies \brak{\lambda_1+1}\brak{\lambda_2+1}=1+\brak{\lambda_1\lambda_2}$\\
+    &\\
+    &$\qquad\qquad\implies\boxed{ \lambda_1+\lambda_2 = 0}$\\
+    &\\
+   
+    &$\qquad\qquad\implies\boxed{ tr(\vec{A})=0}$\\
+    &\\
     \hline
-    
-    & {\begin{align}\label{eq2}\boxed{1+\det{\vec{A}}= 1+\brak{ad-bc}}\end{align}}\\
-    
-    
-    & Since, $\det\brak{\vec{A}+\vec{I}}=\det\brak{\vec{A}}$\\
-    &\\
-    & Equating \eqref{eq1} and \eqref{eq2};\\
-    &\\
-    &$\qquad\qquad\qquad\brak{a+1}\brak{d+1}-\brak{bc}=1+\brak{ad-bc}$\\
-    &\\
-    &$\qquad\qquad\qquad \implies\boxed {\brak{a+d}=0=tr(\vec{A})}$\\
-    &\\
-    
-    \hline
-	\multirow{3}{*}{Option 1 } 
+  	\multirow{3}{*}{Option 1 : $\det\vec{A}=0$ } 
 	& \\
 	& Let,\\
 	& $\qquad\qquad\qquad\vec{A}=\myvec{0&-1\\0&0}$\\
@@ -202,7 +200,7 @@ If $\vec{A}$ is a $2\times2$ matrix over $\mathbb{R}$ with $\det\brak{\vec{A}+\v
 	\item $\vec{A} \neq \vec{0}$
 	\item $\vec{A}$ is  singular.\end{enumerate}}\\
 	\hline
-	\multirow{3}{*}{Option 2} & \\
+	\multirow{3}{*}{Option 2 : $\vec{A}=0$} & \\
 	& Let,\\
 	& $\qquad\qquad\qquad\vec{A}= \myvec{0&0\\0&0}$\\
 	&\\
@@ -211,35 +209,16 @@ If $\vec{A}$ is a $2\times2$ matrix over $\mathbb{R}$ with $\det\brak{\vec{A}+\v
     & $\qquad\qquad\qquad\det\brak{\vec{A}+\vec{I}}=1$\\
     &\\
     & $\qquad\qquad\implies\det\brak{\vec{A}+\vec{I}}=1+\det(\vec{A}) $\\
-    \hline
     & Conclusion: {\begin{enumerate}
 	\item $tr(\vec{A})=0$
 	\item $\det{\vec{A}}=0$
 	\item $\vec{A}=\vec{0}$
 	\item $\vec{A}$ is singular.\end{enumerate}}\\
     \hline
-    \multirow{3}{*}{Option 3} & \\
-    & Let ,\\
-    & $\qquad\qquad\qquad\vec{A}=\myvec{\lambda_1&0\\0&\lambda_2}$\\
-    &\\
-    & Eigen value of $\vec{A}=\lambda_1,\lambda_2$\\
-    &\\
-    & Eigen value of $\brak{\vec{A}+\vec{I}} = \lambda_1+1,\lambda_2+1$\\
-    &\\
-    & Since,$\det\brak{\vec{A}+\vec{I}}=1+\det(\vec{A})$\\
-    &\\
-    & $\qquad\qquad\implies \brak{\lambda_1+1}\brak{\lambda_2+1}=1+\brak{\lambda_1\lambda_2}$\\
-    &\\
-    &$\qquad\qquad\implies \lambda_1+\lambda_2 = 0$\\
-    &\\
-    & trace of any matrix is sum of its eigen values. \\
-    &\\
-    &$\qquad\qquad\implies tr(\vec{A})=0$\\
-    &\\
-    \hline
-	\multirow{3}{*}{Option 4}&\\
-	
-  	& \\
+	\multirow{3}{*}{Option 4: $\vec{A}$ is non singular}&\\
+  	& Non Singular Matrix:
+A non-singular matrix is a square one whose determinant is not zero.Thus, a non-singular matrix is also known as a full rank matrix.\\
+&\\
 	& Let,\\
 	& $\qquad\qquad\qquad\vec{A}=\myvec{1&0\\0&-1}$\\
 	&\\
