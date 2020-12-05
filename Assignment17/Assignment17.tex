@@ -156,15 +156,30 @@ If $\vec{A}$ is a $2\times2$ matrix over $\mathbb{R}$ with $\det\brak{\vec{A}+\v
 \hline
     \multirow{3}{*}{Given} 
     &\\
-     & Let $\vec{A}$ be a $2\times2$ matrix over $\mathbb{R}$.\\
+     & $\vec{A}$ be a $2\times2$ matrix over $\mathbb{R}$ with\\
      &\\
-    & $\qquad\qquad\qquad\vec{A}=\myvec{\lambda_1&0\\0&\lambda_2}$\\
+      &$\qquad\qquad \qquad \det\brak{\vec{A}+\vec{I}}=1+\det(\vec{A})$\\
+      &\\
+     \hline
+     \multirow{3}{*}{Explanation} &\\
+     & If $\vec{X}$ is an eigen vector of matrix $\vec{A}$
+     corresponding to the eigen value $\lambda$ i.e \\
+     &\\
+     & $\qquad\qquad\qquad\vec{A}\vec{X}=\lambda\vec{X}$\\
+     &\\
+     & then, $\brak{\vec{I}+\vec{A}}\vec{X}=\brak{1+\lambda}\vec{X}$\\
+     &\\
+     &Thus, $\vec{X}$ is an eigen vector of $\brak{\vec{A}+\vec{I}}$ corresponding to the eigen value $\brak{1+\lambda}$.\\
+     
+     &\\
+     
+     & Let, $\lambda_1,\lambda_2$ be two eigen values of $\vec{A}$ and $\brak{1+\lambda_1},\brak{1+\lambda_2}$ be the eigen values of $\brak{\vec{A}+\vec{I}}.$\\
     &\\
     & $\implies$ Eigen value of $\vec{A}=\lambda_1,\lambda_2$\\
     &\\
-    & $\qquad\qquad\qquad\brak{\vec{A}+\vec{I}}=\myvec{\lambda_1+1&0\\0&\lambda_2+1}$\\
+    &  $\implies$ Eigen value of $\brak{\vec{A}+\vec{I}} = \lambda_1+1,\lambda_2+1$\\
     &\\
-    & $\implies$ Eigen value of $\brak{\vec{A}+\vec{I}} = \lambda_1+1,\lambda_2+1$\\
+    \hline
     &\\
     & Since,\\
     &$\qquad\qquad \qquad \det\brak{\vec{A}+\vec{I}}=1+\det(\vec{A})$\\
@@ -209,6 +224,9 @@ If $\vec{A}$ is a $2\times2$ matrix over $\mathbb{R}$ with $\det\brak{\vec{A}+\v
     & $\qquad\qquad\qquad\det\brak{\vec{A}+\vec{I}}=1$\\
     &\\
     & $\qquad\qquad\implies\det\brak{\vec{A}+\vec{I}}=1+\det(\vec{A}) $\\
+    
+    \hline
+   
     & Conclusion: {\begin{enumerate}
 	\item $tr(\vec{A})=0$
 	\item $\det{\vec{A}}=0$
@@ -217,7 +235,7 @@ If $\vec{A}$ is a $2\times2$ matrix over $\mathbb{R}$ with $\det\brak{\vec{A}+\v
     \hline
 	\multirow{3}{*}{Option 4: $\vec{A}$ is non singular}&\\
   	& Non Singular Matrix:
-A non-singular matrix is a square one whose determinant is not zero.Thus, a non-singular matrix is also known as a full rank matrix.\\
+A non-singular matrix is a square one whose determinant is not zero.non-singular matrix is also  a full rank matrix.\\
 &\\
 	& Let,\\
 	& $\qquad\qquad\qquad\vec{A}=\myvec{1&0\\0&-1}$\\
