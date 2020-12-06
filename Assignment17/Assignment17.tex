@@ -142,7 +142,6 @@ https://github.com/neharani289/MatrixTheory/Assignment17
 \section{\textbf{Problem}}
 %
 (ugcjune/2018/28) : \\
-
 If $\vec{A}$ is a $2\times2$ matrix over $\mathbb{R}$ with $\det\brak{\vec{A}+\vec{I}} = 1+\det\brak{\vec{A}}$, then we can conclude that\\
 \begin{enumerate}
     \item $\det\brak{\vec{A}}=0$\\
@@ -198,7 +197,7 @@ If $\vec{A}$ is a $2\times2$ matrix over $\mathbb{R}$ with $\det\brak{\vec{A}+\v
     \hline
   	\multirow{3}{*}{Option 1 : $\det\vec{A}=0$ } 
 	& \\
-	& Let,\\
+	& Consider an example where $\det{\vec{A}}=0$\\
 	& $\qquad\qquad\qquad\vec{A}=\myvec{0&-1\\0&0}$\\
 	&\\
 	& $\qquad\qquad\qquad\det{\vec{A}} = \mydet{0&-1\\0&0} = 0$\\
@@ -214,9 +213,23 @@ If $\vec{A}$ is a $2\times2$ matrix over $\mathbb{R}$ with $\det\brak{\vec{A}+\v
 	\item $\det{\vec{A}}= 0$
 	\item $\vec{A} \neq \vec{0}$
 	\item $\vec{A}$ is  singular.\end{enumerate}}\\
+	& Consider an example where $\det{\vec{A}}\neq 0$\\
+	&\\
+	& $\qquad\qquad\qquad\vec{A}=\myvec{0&1\\-1&0}$\\
+	&\\
+	& $\qquad\qquad\qquad\det{\vec{A}}= 1$\\
+	& $\qquad\qquad\qquad\det{\vec{A}+\vec{I}}= 2$\\
+	& $\qquad\qquad\qquad\implies \det(\vec{A}+\vec{I})= 1+\det(\vec{A})$\\
+	&\\
+	& Conclusion: {\begin{enumerate}
+	\item $tr(\vec{A})=0$
+	\item $\det{\vec{A}}\neq 0$
+	\item $\vec{A} \neq \vec{0}$
+	\item $\vec{A}$ is  singular.\end{enumerate}}\\
+	
 	\hline
-	\multirow{3}{*}{Option 2 : $\vec{A}=0$} & \\
-	& Let,\\
+	\multirow{3}{*}{Option 2 : $\vec{A}=\vec{0}$} & \\
+	& Consider an example where $\vec{A}=0;$\\
 	& $\qquad\qquad\qquad\vec{A}= \myvec{0&0\\0&0}$\\
 	&\\
     & $\qquad\qquad\qquad\det\vec{A}=0$\\
@@ -224,20 +237,35 @@ If $\vec{A}$ is a $2\times2$ matrix over $\mathbb{R}$ with $\det\brak{\vec{A}+\v
     & $\qquad\qquad\qquad\det\brak{\vec{A}+\vec{I}}=1$\\
     &\\
     & $\qquad\qquad\implies\det\brak{\vec{A}+\vec{I}}=1+\det(\vec{A}) $\\
-    
-    \hline
    
     & Conclusion: {\begin{enumerate}
 	\item $tr(\vec{A})=0$
 	\item $\det{\vec{A}}=0$
 	\item $\vec{A}=\vec{0}$
 	\item $\vec{A}$ is singular.\end{enumerate}}\\
+	&\\
+	& Consider an example where $\vec{A}\neq \vec{0}$;\\
+	&\\
+	
+    & $\qquad\qquad\qquad\vec{A}= \myvec{0&1\\0&0}$\\
+    &\\
+    & $\qquad\qquad\qquad\det{\vec{A}}=0$\\
+    & $\qquad\qquad\qquad\det\brak{\vec{A}+\vec{I}}=1$\\
+    &\\
+    & $\qquad\qquad\implies\det\brak{\vec{A}+\vec{I}}=1+\det(\vec{A}) $\\
+    &\\
+     & Conclusion: {\begin{enumerate}
+	\item $tr(\vec{A})=0$
+	\item $\det{\vec{A}}=0$
+	\item $\vec{A}\neq\vec{0}$
+	\item $\vec{A}$ is singular.\end{enumerate}}\\
+	&\\
     \hline
 	\multirow{3}{*}{Option 4: $\vec{A}$ is non singular}&\\
   	& Non Singular Matrix:
 A non-singular matrix is a square one whose determinant is not zero.non-singular matrix is also  a full rank matrix.\\
 &\\
-	& Let,\\
+	& Consider an example where $\vec{A}$ is non singular.\\
 	& $\qquad\qquad\qquad\vec{A}=\myvec{1&0\\0&-1}$\\
 	&\\
 	& $\qquad\qquad\qquad\det{\vec{A}} = \mydet{1&0\\0&-1} = -1$\\
@@ -253,13 +281,53 @@ A non-singular matrix is a square one whose determinant is not zero.non-singular
 	\item $\det{\vec{A}}\neq0$
 	\item $\vec{A} \neq \vec{0}$
 	\item $\vec{A}$ is non singular.\end{enumerate}}\\
+		& Consider an example where $\vec{A}$ is  singular.\\
+	& $\qquad\qquad\qquad\vec{A}=\myvec{0&1\\0&0}$\\
+	&\\
+	&$\qquad\qquad\qquad\det{\vec{A}}=0$\\
+	&\\
+	&$\qquad\qquad\qquad \det(\vec{A}+\vec{I})=1$ \\
+	& $\qquad\qquad\implies\det\brak{\vec{A}+\vec{I}}=1+\det(\vec{A})$\\
+	&\\
+	& Conclusion: {\begin{enumerate}
+	\item $tr(\vec{A})=0$
+	\item $\det{\vec{A}}=0$
+	\item $\vec{A} \neq \vec{0}$
+	\item $\vec{A}$ is singular.\end{enumerate}}\\
 	\hline
+	\multirow{3}{*}{Option 3 : $tr(\vec{A})=\vec{0}$} & \\
+	& Consider an example where $tr(\vec{A})=0;$\\
+	& $\qquad\qquad\qquad\vec{A}= \myvec{1&0\\0&-1}$\\
+	&\\
+    & $\qquad\qquad\qquad\det\vec{A}=-1$\\
+    &\\
+    & $\qquad\qquad\qquad\det\brak{\vec{A}+\vec{I}}=2$\\
+    &\\
+    & $\qquad\qquad\implies\det\brak{\vec{A}+\vec{I}}=1+\det(\vec{A}) $\\
+   
+    & Conclusion: {\begin{enumerate}
+	\item $tr(\vec{A})=0$
+	\item $\det{\vec{A}}\neq0$
+	\item $\vec{A}\neq\vec{0}$
+	\item $\vec{A}$ is non singular.\end{enumerate}}\\
+	&\\
+	& Consider an example where $tr(\vec{A})\neq \vec{0}$;\\
+	&\\
+	
+    & $\qquad\qquad\qquad\vec{A}= \myvec{1&0\\0&0}$\\
+    &\\
+    & $\qquad\qquad\qquad\det{\vec{A}}=0$\\
+    & $\qquad\qquad\qquad\det\brak{\vec{A}+\vec{I}}=2$\\
+    &\\
+    & $\qquad\qquad\implies\det\brak{\vec{A}+\vec{I}}\neq1+\det(\vec{A}) $\\
+    & Thus, the given condition not satisfied in this case.\\
+    &\\
+    \hline
 	\multirow{3}{*}{Conclusion}&\\
 & In all options, $tr(\vec{A})=0$ satisfied.\\
 &\\
-& Thus, Option 3 is correct. \\
+& Thus, we can conclude Option 3 is correct. \\
 &\\
-
 	\hline
 	\caption{Solution Summary}
     \label{table:1}
